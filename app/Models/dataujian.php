@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class dataujian extends Model
 {
-    public $table = "dataujian";
+    public $table = "dataujians";
 }

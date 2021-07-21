@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class dataanggota extends Model
 {
-    public $table = "dataanggota";
+    public $table = "dataanggotas";
     
 }

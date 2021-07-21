@@ -26,7 +26,7 @@ class controllerKP extends Controller {
 
     public function insertdb(Request $request){
     // insert data ke table dataujian
-    DB::table('dataujian')->insert([
+    DB::table('dataujians')->insert([
         'Nama' => $request->Nama,
         'Nim' => $request->Nim,
         'Jurusan' => $request->Jurusan,
@@ -38,14 +38,14 @@ class controllerKP extends Controller {
 
     public function edit($Nim){
     // mengambil data pegawai berdasarkan id yang dipilih
-    $dataujian = DB::table('dataujian')->where('Nim',$Nim)->get();
+    $dataujian = DB::table('dataujians')->where('Nim',$Nim)->get();
     // passing data pegawai yang didapat ke view edit.blade.php
     return view('edit',['dataujian' => $dataujian]);
     }
 
     public function update(Request $request){
     // update data pegawai
-    DB::table('dataujian')->where('Nim',$request->Nim)->update([
+    DB::table('dataujians')->where('Nim',$request->Nim)->update([
         'Nama' => $request->Nama,
         'Nim' => $request->Nim,
         'Jurusan' => $request->Jurusan,
@@ -56,7 +56,7 @@ class controllerKP extends Controller {
     } 
 
     public function hapus($Nim) {
-        DB::table('dataujian')->where('Nim',$Nim)->delete();
+        DB::table('dataujians')->where('Nim',$Nim)->delete();
         return redirect('/dataujian');
     }
 

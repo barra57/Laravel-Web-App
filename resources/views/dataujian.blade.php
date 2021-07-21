@@ -349,7 +349,7 @@
           @foreach($dataujians as $ujian)
           <tr>
             <td>{{$ujian['Nama']}}</td>
-            <td>{{$ujian['Nim']}}</td>
+            <td>{{$ujian['NIM']}}</td>
             <td>{{$ujian['Jurusan']}}</td>
             <td>{{$ujian['Ujian']}}</td>
             <td><a href="/dataujian/edit/{{ $ujian->Nim }}">Edit<a href="/dataujian/hapus/{{ $ujian->Nim }}">Hapus</a></a></td>
