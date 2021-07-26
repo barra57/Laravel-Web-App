@@ -13,7 +13,7 @@ class TaskController extends Controller
     {
         
         
-        return view ('dashboard');
+        return view ('dashboard2');
     }
     public function form()
    {
