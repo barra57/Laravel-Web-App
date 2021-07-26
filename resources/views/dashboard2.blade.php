@@ -186,6 +186,29 @@
                 <span>Table Translate</span>
 
               </a>
+              <li class="air__menuLeft__item air__menuLeft__submenu">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>Ujian</span>
+              </a>
+              <ul class="air__menuLeft__list">
+                <li class="air__menuLeft__item">
+                  <a href="/admin/categories" class="air__menuLeft__link">
+                    <span>Categories</span>
+                  </a>
+                </li>
+                <li class="air__menuLeft__item">
+                  <a href="/admin/questions" class="air__menuLeft__link">
+                    <span>Question</span>
+                  </a>
+                </li>
+                <li class="air__menuLeft__item">
+                  <a href="/admin/options" class="air__menuLeft__link">
+                    <span>Options</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
     <!--      <ul class="air__menuLeft__list">
                 <li class="air__menuLeft__item">
                   <a href="dashboards-analytics.html" class="air__menuLeft__link">
