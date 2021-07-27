@@ -174,13 +174,8 @@
 
               </a>
               <li class="air__menuLeft__category">
-              <span>Translate</span>
+              <span>Table</span>
             </li>
-              <a href="/form" class="air__menuLeft__link">
-              <i class="fe fe-bookmark air__menuLeft__icon"></i> 
-                <span>Form Translate</span>
-
-              </a>
               </a>
               <a href="/table" class="air__menuLeft__link">
               <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
@@ -1017,7 +1012,7 @@
                 <span class="help-block">{{ trans('cruds.option.fields.points_helper') }}</span>
             </div>
             <div class="form-group">
-                <button class="btn btn-danger" type="submit">
+                <button class="btn btn-primary" type="submit">
                     {{ trans('global.save') }}
                 </button>
             </div>

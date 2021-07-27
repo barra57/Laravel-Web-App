@@ -138,7 +138,6 @@
         </a>
         <a href="javascript: void(0);" class="air__menuLeft__user">
           <div class="air__menuLeft__user__avatar">
-            <img src="../../components/core/img/avatars/avatar.png" alt="David Beckham" />
           </div>
           <div class="air__menuLeft__user__name">
             Donald Gracie
@@ -1006,7 +1005,7 @@
                 <span class="help-block">{{ trans('cruds.question.fields.question_text_helper') }}</span>
             </div>
             <div class="form-group">
-                <button class="btn btn-danger" type="submit">
+                <button class="btn btn-primary" type="submit">
                     {{ trans('global.save') }}
                 </button>
             </div>
