@@ -204,7 +204,7 @@
                   </a>
                 </li>
                 <li class="air__menuLeft__item">
-                  <a href="#" class="air__menuLeft__link">
+                  <a href="/admin/questions" class="air__menuLeft__link">
                     <span>Question</span>
                   </a>
                 </li>

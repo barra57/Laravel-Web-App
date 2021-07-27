@@ -982,12 +982,12 @@
         </thead>
         <tbody>
         @foreach($questions as $key => $question)
-          <tr data-entry-id="{{ $option->id }}">
+          <tr data-entry-id="{{ $question->id }}">
             <td>{{ $question->id ?? '' }}</td>
             <td>{{ $question->category->name ?? '' }}</td>
             <td>{{ $question->question_text ?? '' }}</td>
             <td>
-                can('question_show')
+                @can('question_show')
                 <a href="{{ route('admin.questions.show', $question->id) }}"><button type="button" class="btn btn-primary">
                 <i class="fe fe-edit mr-1" aria-hidden="true"></i>
                 View
