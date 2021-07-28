@@ -141,113 +141,67 @@
             <img src="../../components/core/img/avatars/avatar.png" alt="David Beckham" />
           </div>
           <div class="air__menuLeft__user__name">
-            Donald Gracie
+            {{ Auth::user()->name }}
           </div>
           <div class="air__menuLeft__user__role">
-            Student
+            {{ Auth::user()->role }}
           </div>
         </a>
         <div class="air__menuLeft__container air__customScroll">
           <ul class="air__menuLeft__list">
             <li class="air__menuLeft__category">
-              <span>Information</span>
-            </li>
-            <li class="air__menuLeft__item">
-              <a href="javascript: void(0)" class="air__menuLeft__link air__sidebar__actionToggle">
-                <i class="fe fe-settings air__menuLeft__icon"></i>
-                <span>Settings</span>
-              </a>
-            </li>
-            <li class="air__menuLeft__item">
-              <a href="https://docs.airuitemplate.com" target="_blank" class="air__menuLeft__link">
-                <i class="fe fe-compass air__menuLeft__icon"></i>
-                <span>Documentation</span>
-              </a>
-            </li>
-            <li class="air__menuLeft__category">
               <span>Dashboards</span>
             </li>
         <!--    <li class="air__menuLeft__item air__menuLeft__submenu"> -->
-              <a href="/dashboard" class="air__menuLeft__link">
+              <a href="{{ route('client.home') }}" class="air__menuLeft__link">
               <i class="fe fe-home air__menuLeft__icon"></i> 
                 <span>Dashboards</span>
-
+              </a>
+              <a href="{{ route('client.test') }}" class="air__menuLeft__link">
+              <i class="fe fe-home air__menuLeft__icon"></i> 
+                <span>Start Test</span>
               </a>
               <li class="air__menuLeft__category">
               <span>Table</span>
             </li>
+              <a href="/terjemah" class="air__menuLeft__link">
+              <i class="fe fe-bookmark air__menuLeft__icon"></i> 
+                <span>Translate</span>
               </a>
-              <a href="/table3" class="air__menuLeft__link">
-              <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
-                <span>Table Quiz</span>
-
               </a>
               <a href="/table2" class="air__menuLeft__link">
               <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
-                <span>Table Course</span>
-
-              </a>
-              <a href="/table" class="air__menuLeft__link">
-              <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
-                <span>Table Translate</span>
-
-              </a>
-              <a href="/table4" class="air__menuLeft__link">
-              <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
-                <span>Table Log</span>
-
-              </a>
-              <a href="/upload" class="air__menuLeft__link">
-              <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
-                <span>Table Materi</span>
+                <span>Course</span>
 
               </a>
               <li class="air__menuLeft__item air__menuLeft__submenu">
-                    <a href="javascript: void(0)" class="air__menuLeft__link">
-                        <i class="fe fe-menu air__menuLeft__icon"></i>
-                    <span>Layanan</span>
-                    </a>
-                    <ul class="air__menuLeft__list">
-                        <li class="air__menuLeft__item">
-                        <a href="/terjemah" class="air__menuLeft__link">
-                            <span>Terjemahan</span>
-                        </a>
-                        </li>
-                    </ul>
-                </li>
-    <!--      <ul class="air__menuLeft__list">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>Layanan</span>
+              </a>
+              <ul class="air__menuLeft__list">
                 <li class="air__menuLeft__item">
-                  <a href="dashboards-analytics.html" class="air__menuLeft__link">
-                    <span>Analytics</span>
+                  <a href="/table4" class="air__menuLeft__link">
+                    <span>Log</span>
                   </a>
                 </li>
-                <li class=" air__menuLeft__item">
-                  <a href="dashboards-statistics.html" class="air__menuLeft__link">
-                    <span>Statistics</span>
-                  </a>
-                </li>
-                <li class=" air__menuLeft__item">
-                  <a href="dashboards-ecommerce.html" class="air__menuLeft__link">
-                    <span>Ecommerce</span>
-                  </a>
-                </li>
-                <li class=" air__menuLeft__item">
-                  <a href="dashboards-crypto.html" class="air__menuLeft__link">
-                    <span>Crypto</span>
-                  </a>
-                </li>
-                <li class=" air__menuLeft__item">
-                  <a href="dashboards-jira.html" class="air__menuLeft__link">
-                    <span>Example of a Dashboard</span>
-                  </a>
-                </li>
-                <li class=" air__menuLeft__item">
-                  <a href="dashboards-helpdesk.html" class="air__menuLeft__link">
-                    <span>Helpdesk</span> 
+                <li class="air__menuLeft__item">
+                  <a href="/upload" class="air__menuLeft__link">
+                    <span>Upload</span>
                   </a>
                 </li>
               </ul>
-            </li> -->
+              <li class="air__menuLeft__category">
+                <span>Information</span>
+              </li>
+              <li class="air__menuLeft__item">
+                <a href="javascript: void(0)" class="air__menuLeft__link air__sidebar__actionToggle">
+                  <i class="fe fe-settings air__menuLeft__icon"></i>
+                    <span>Settings</span>
+                </a>
+              </li>
+        
+            </li>
         </div> 
       </div> 
     </div> 
@@ -500,73 +454,7 @@
         </div>
       </div>
     </div>
-<!--    <button
-      class="air__sidebar__toggleButton air__sidebar__actionToggle btn btn-rounded btn-light text-nowrap text-dark font-weight-bold font-size-18"
-    >
-      <i class="fe fe-settings text-blue mr-md-2"></i>
-      <span class="d-none d-md-inline">Settings</span>
-    </button> -->
-    <div class="air__chat">
-      <button
-        class="air__chat__toggleButton air__chat__actionToggle btn btn-rounded btn-light text-nowrap text-dark font-weight-bold font-size-18"
-      >
-        <i class="fe fe-message-square text-blue mr-md -2"></i>
-        <span class="d-none d-md-inline">Support Chat</span>
-      </button>
-      <div class="air__chat__container">
-        <div class="d-flex flex-wrap mb-2">
-          <div class="text-dark font-size-18 font-weight-bold mr-auto">Support Chat</div>
-          <button class="air__g14__closeBtn btn btn-link air__chat__actionToggle">
-            <i class="fe fe-x-square font-size-21 align-middle text-gray-6"></i>
-          </button>
-        </div>
-        <div class="air__chat__innerContainer d-flex flex-column justify-content-end">
-          <div class="air__g14__contentWrapper air__customScroll">
-            <div class="air__g14__message">
-              <div class="air__g14__messageContent">
-                <div class="text-gray-4 font-size-12 text-uppercase">You, 5 min ago</div>
-                <div>
-                  Hi! I have a question how soon can i apply for a EPRT exam?
-                </div>
-              </div>
-              <div class="air__g14__messageAvatar air__utils__avatar">
-                <img src="../../components/core/img/avatars/avatar-2.png" alt="You" />
-              </div>
-            </div>
-            <div class="air__g14__message air__g14__message--answer">
-              <div class="air__g14__messageContent">
-                <div class="text-gray-4 font-size-12 text-uppercase">Ikhsan, 14 sec ago</div>
-                <div>
-                  It's open right now, all you have to do is apply. Click the link provided in the language test.
-                </div>
-              </div>
-              <div class="air__g14__messageAvatar air__utils__avatar">
-                <img src="../../components/core/img/avatars/avatar-2.png" alt="Admin ELC" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pt-2 pb-2">
-          Ikhsan is typing...
-        </div>
-        <div>
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Send message..."
-              aria-label="Recipient's username"
-              aria-describedby="button-addon2"
-            />
-            <div class="input-group-append">
-              <button class="btn btn-primary" type="button">
-                <i class="fe fe-send align-middle"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <div class="air__layout">
       <div class="air__layout__header">
         <div class="air__utils__header">
@@ -621,41 +509,7 @@
                         </a>
                       </li>
                     </ul>
-            <!--        <div class="text-uppercase font-size-12 mb-2 text-gray-6">Agents (4)</div>
-                    <ul class="list-unstyled">
-                      <li class="air__l1__item">
-                        <a href="javascript: void(0);" class="air__l1__itemLink">
-                          <div class="air__utils__avatar mr-3">
-                            <img src="../../components/core/img/avatars/5.jpg" alt="Mary Stanform" />
-                          </div>
-                          <div>
-                            <div class="text-blue">Mary Stanform</div>
-                            <div class="text-muted">Sales Manager</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="air__l1__item">
-                        <a href="javascript: void(0);" class="air__l1__itemLink">
-                          <div class="air__utils__avatar mr-3">
-                            <img src="../../components/core/img/avatars/1.jpg" alt="Jamie Rockstar" />
-                          </div>
-                          <div>
-                            <div class="text-blue">Jamie Rockstar</div>
-                            <div class="text-muted">Blackoffice Agent</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="air__l1__item">
-                        <a href="javascript: void(0);" class="air__l1__itemLink">
-                          <div class="air__utils__avatar mr-3">
-                            <img src="../../components/core/img/avatars/2.jpg" alt="Axel Freddie" />
-                          </div>
-                          <div>
-                            <div class="text-blue">Axel Freddie</div>
-                            <div class="text-muted">Blackoffice Agent</div>
-                          </div>
-                        </a>
-                      </li> -->
+            
                     </ul>
                   </div> 
                 </div>
@@ -676,14 +530,7 @@
         <!--        <div class="dropdown-header">Active</div> -->
                 <a class="dropdown-item" href="javascript:void(0)">EPRT Test</a>
                 <a class="dropdown-item" href="javascript:void(0)">ECCT Test</a>
-        <!--        <a class="dropdown-item" href="javascript:void(0)">Documentation</a>
-                <div class="dropdown-header">Inactive</div>
-                <a class="dropdown-item" href="javascript:void(0)">Marketing</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="javascript:void(0)">
-                  <i class="dropdown-icon fe fe-settings"></i>
-                  Settings
-                </a> -->
+        
               </div>
             </div>
             <p class="mb-0 mr-4 d-xl-block d-none">
@@ -778,66 +625,7 @@
                               Check your email for your certificate.
                             </p>
                           </li>
-                       <!--   <li class="mb-3">
-                            <div class="air__l2__head">
-                              <p class="air__l2__title">
-                                Update Status:
-                                <strong class="text-danger">Rejected</strong>
-                              </p>
-                              <time class="air__l2__time">15 min ago</time>
-                            </div>
-                            <p class="air__l2__content">
-                              Mary has declined your quote.
-                            </p>
-                          </li>
-                          <li class="mb-3">
-                            <div class="air__l2__head">
-                              <p class="air__l2__title">
-                                Payment Received:
-                                <strong class="text-black">$5,467.00</strong>
-                              </p>
-                              <time class="air__l2__time">15 min ago</time>
-                            </div>
-                            <p class="air__l2__content">
-                              GOOGLE, LLC AUTOMATED PAYMENTS
-                            </p>
-                          </li>
-                          <li class="mb-3">
-                            <div class="air__l2__head">
-                              <p class="air__l2__title">
-                                Notification:
-                                <strong class="text-danger">Access Denied</strong>
-                              </p>
-                              <time class="air__l2__time">5 Hours ago</time>
-                            </div>
-                            <p class="air__l2__content">
-                              The system prevent login to your account
-                            </p>
-                          </li>
-                          <li class="mb-3">
-                            <div class="air__l2__head">
-                              <p class="air__l2__title">
-                                Payment Received:
-                                <strong class="text-black">$55,829.00</strong>
-                              </p>
-                              <time class="air__l2__time">1 day ago</time>
-                            </div>
-                            <p class="air__l2__content">
-                              GOOGLE, LLC AUTOMATED PAYMENTS
-                            </p>
-                          </li>
-                          <li class="mb-3">
-                            <div class="air__l2__head">
-                              <p class="air__l2__title">
-                                Notification:
-                                <strong class="text-danger">Access Denied</strong>
-                              </p>
-                              <time class="air__l2__time">5 Hours ago</time>
-                            </div>
-                            <p class="air__l2__content">
-                              The system prevent login to your account
-                            </p>
-                          </li> -->
+                       
                         </ul>
                       </div>
                       <div
@@ -902,11 +690,16 @@
                   <span class="badge badge-success font-size-11 ml-2">25 New</span>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="javascript:void(0)">
-                  <i class="dropdown-icon fe fe-log-out"></i> Logout
-                </a>
+                  <a class="dropdown-item" href="{{ route('client.password.create') }}">
+                    {{ __('Change password') }}
+                  </a>
+                  <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                      {{ __('Logout') }}
+                  </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">  @csrf </form>
               </div>
             </div>
+
           </div>
           <div class="air__subbar">
             <ul class="air__subbar__breadcrumbs mr-4">
