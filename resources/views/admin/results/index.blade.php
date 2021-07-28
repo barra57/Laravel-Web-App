@@ -763,7 +763,7 @@
           <tr data-entry-id="{{ $result->id }}">
             <td>{{ $result->id ?? '' }}</td>
             <td>{{ $result->user->name ?? '' }}</td>
-            <td>{{ $question->total_point ?? '' }}</td>
+            <td>{{ $result->total_points ?? '' }}</td>
             <td>
                 @foreach($result->questions as $key => $item)
                     <span class="badge badge-info">{{ $item->question_text }}</span>

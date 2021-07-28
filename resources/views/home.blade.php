@@ -719,6 +719,7 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">  @csrf </form>
               </div>
             </div>
+          </div>
 
           <div class="air__subbar">
             <ul class="air__subbar__breadcrumbs mr-4">
