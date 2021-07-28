@@ -738,7 +738,7 @@
       <div class="air__layout__content">
         <div class="air__utils__content">
           <div class="air__utils__heading"> 
-  <h5><h5><span><a href="{{ route("admin.results.create") }}"><button type="button"class="btn btn-primary mr-2 mb-2">Create Questions</button></a></span> </h5></h5>
+  <h5><h5><span><a href="{{ route("admin.results.create") }}"><button type="button"class="btn btn-primary mr-2 mb-2">Create Results</button></a></span> </h5></h5>
 </div>
 <div class="card">
   <div class="card-body">
@@ -749,10 +749,10 @@
       <table class="table table-hover nowrap editable-table" id="example1">
         <thead>
           <tr>
-            <th>Id</th>
+            <th>ID</th>
             <th>User</th>
             <th>Total Point</th>
-            <th>Questions
+            <th>Questions</th>
             <th>View</th>
             <th>Edit</th>
             <th>Delete</th>
@@ -798,8 +798,9 @@
         <tfoot>
           <tr>
             <th>ID</th>
-            <th>Category Name</th>
-            <th>Question Text</th>
+            <th>User</th>
+            <th>Total Point</th>
+            <th>Questions</th>
           </tr>
         </tfoot>
       </table>
