@@ -123,6 +123,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth.admi
     Route::resource('options', OptionsController::class);
 
     // Results
-    Route::delete('results/destroy', [ResultsAdmin::class,'massDestroy'])->name('results.massDestroy');
-    Route::resource('results', ResultsAdmin::class);
+    Route::delete('results/destroy', [ResultAdmin::class,'massDestroy'])->name('results.massDestroy');
+    Route::resource('results', ResultAdmin::class);
 });

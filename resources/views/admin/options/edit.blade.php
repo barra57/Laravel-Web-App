@@ -909,42 +909,7 @@
                 >
               </li>
             </ul>
-    <!--        <div class="air__subbar__divider mr-4 d-none d-xl-block"></div>
-            <p class="color-gray-4 text-uppercase font-size-18 mb-0 mr-4 d-none d-xl-block">INV-00125</p>
-            <button class="btn btn-primary btn-with-addon mr-auto text-nowrap d-none d-md-block">
-              <span class="btn-addon">
-                <i class="btn-addon-icon fe fe-plus-circle"></i>
-              </span>
-              New Request
-            </button>
-            <div class="air__subbar__amount mr-3 ml-auto d-none d-sm-flex">
-              <p class="air__subbar__amountText">
-                This month
-                <span class="air__subbar__amountValue">$251.12</span>
-              </p>
-              <div class="air__subbar__amountGraph">
-                <i class="air__subbar__amountGraphItem" style="height: 80%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 50%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 70%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 60%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 50%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 65%"></i>
-              </div>
-            </div>
-            <div class="air__subbar__amount d-none d-sm-flex">
-              <p class="air__subbar__amountText">
-                Last month
-                <span class="air__subbar__amountValue">$12,256.12</span>
-              </p>
-              <div class="air__subbar__amountGraph">
-                <i class="air__subbar__amountGraphItem" style="height: 60%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 65%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 75%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 55%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 100%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 85%"></i>
-              </div>
-            </div> -->
+    
           </div>
         </div>
       </div> 
@@ -954,19 +919,6 @@
   <h5>Very Cool Edit Form</h5>
 </div>
 
-<!-- <div class="card">
-  <div class="card-body">
-    <h4 class="mb-4">
-      <strong>Form</strong>
-    </h4>
-    <form action="task/store" method="post">
-		{{ csrf_field() }}
-		Nama <input type="text" name="name" required="required"> <br/>
-		NIM <input type="number" name="NIM" required="required"> <br/>
-		email <input type="text" name="email" required="required"> <br/>
-		book <input type name="book" required="required"><br/>
-		<input type="submit" value="Upload">
-	</form> -->
 
     <div class="card">
     <div class="card-header">
@@ -1020,47 +972,7 @@
     </div>
 </div>
 
- <!--     <div class="form-row">
-      <form action="/Task/store" method="post">
-      
-        <div class="form-group col-md-6">
-          <label for="inputfirstname">Name</label>
-          <input type="text" class="form-control" id="name" name="name"/>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputlastname">NIM</label>
-          <input type="number" class="form-control" id="NIM" name="NIM"/>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputemail">Email</label>
-        <input type="text" class="form-control" id="email"  name="name" placeholder="example@mail.com" />
-      </div>
-      <div class="form-group">
-      <label for="jasa">Service Type</label>
-           <select class="selectpicker">
-                <option>Regular - 50,000</option>
-                <option>Express - 75,000</option>
-           </select>
-      </div>
-      <div class="form-group">
-        <label for="bookT">Book Title</label>
-        <input type="book" class="form-control" id="book" name="book" placeholder="Harry Potter" />
-      </div>       
-      <div class="form-row">
-        <div class="form-group col-md-12">
-          <label>Upload Document</label>
-          <input type="file" class="dropify" />
-        </div> 
-      </div>
-      <div class="form-group">
-        <label class="air__utils__control air__utils__control__checkbox">
-          <input type="checkbox" checked="checked" />
-          <span class="air__utils__control__indicator"></span>
-          I VERIFY THAT THE ABOVE FILE IS CORRECT.
-        </label>
-      </div>
-      <input type="submit" value="Simpan Data"> -->
+ 
 </div>
 </script>
       </div>
