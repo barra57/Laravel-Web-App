@@ -27,29 +27,33 @@ class controllerKP extends Controller {
     public function insertdb(Request $request){
     // insert data ke table dataujian
     DB::table('dataujians')->insert([
+        'No' => $request->No,
         'Nama' => $request->Nama,
-        'Nim' => $request->Nim,
-        'Jurusan' => $request->Jurusan,
-        'Ujian' => $request->Ujian
+        'Tanggaldaftar' => $request->Tanggaldaftar,
+        'Ujian' => $request->Ujian,
+        'Tanggalujian' => $request->Tanggalujian,
+        'Sesi' => $request->Sesi
     ]);
     // alihkan halaman ke halaman dataujian
     return redirect('/dataujian');
     }
 
-    public function edit($Nim){
+    public function edit($No){
     // mengambil data pegawai berdasarkan id yang dipilih
-    $dataujian = DB::table('dataujians')->where('Nim',$Nim)->get();
+    $dataujian = DB::table('dataujians')->where('No',$No)->get();
     // passing data pegawai yang didapat ke view edit.blade.php
     return view('edit',['dataujian' => $dataujian]);
     }
 
     public function update(Request $request){
     // update data pegawai
-    DB::table('dataujians')->where('Nim',$request->Nim)->update([
+    DB::table('dataujians')->where('No',$request->No)->update([
+        'No' => $request->No,
         'Nama' => $request->Nama,
-        'Nim' => $request->Nim,
-        'Jurusan' => $request->Jurusan,
-        'Ujian' => $request->Ujian
+        'Tanggaldaftar' => $request->Tanggaldaftar,
+        'Ujian' => $request->Ujian,
+        'Tanggalujian' => $request->Tanggalujian,
+        'Sesi' => $request->Sesi
     ]);
     // alihkan halaman ke halaman pegawai
     return redirect('/dataujian');

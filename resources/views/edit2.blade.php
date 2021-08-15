@@ -136,23 +136,22 @@
         <a href="javascript: void(0);" class="air__menuLeft__logo">
           <img src="../../components/core/img/logoTelu-small.png" />
         </a>
-        <a href="javascript: void(0);" class="air__menuLeft__user">
-          <div class="air__menuLeft__user__avatar">
-            <img src="../../components/core/img/avatars/avatar.png" alt="David Beckham" />
-          </div>
-          <div class="air__menuLeft__user__name">
-            {{ Auth::user()->name }}
-          </div>
-          <div class="air__menuLeft__user__role">
-            {{ Auth::user()->role }}
-          </div>
-        </a>
+          <a href="javascript: void(0);" class="air__menuLeft__user">
+            <div class="air__menuLeft__user__avatar">
+              <img src="../../components/core/img/avatars/avatar.png" alt="David Beckham" />
+            </div>
+            <div class="air__menuLeft__user__name">
+              {{ Auth::user()->name }}
+            </div>
+            <div class="air__menuLeft__user__role">
+              as USER
+            </div>
+          </a>
         <div class="air__menuLeft__container air__customScroll">
           <ul class="air__menuLeft__list">
             <li class="air__menuLeft__category">
               <span>Dashboards</span>
             </li>
-        <!--    <li class="air__menuLeft__item air__menuLeft__submenu"> -->
               <a href="{{ route('client.home') }}" class="air__menuLeft__link">
               <i class="fe fe-home air__menuLeft__icon"></i> 
                 <span>Dashboards</span>
@@ -172,27 +171,13 @@
               <a href="/table2" class="air__menuLeft__link">
               <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
                 <span>Course</span>
-
               </a>
-              <li class="air__menuLeft__item air__menuLeft__submenu">
-              <a href="javascript: void(0)" class="air__menuLeft__link">
-                <i class="fe fe-menu air__menuLeft__icon"></i>
-                <span>Layanan</span>
+              <a href="/dataujian" class="air__menuLeft__link">
+              <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
+                <span>Language Test</span>
               </a>
-              <ul class="air__menuLeft__list">
-                <li class="air__menuLeft__item">
-                  <a href="/table4" class="air__menuLeft__link">
-                    <span>Log</span>
-                  </a>
-                </li>
-                <li class="air__menuLeft__item">
-                  <a href="/upload" class="air__menuLeft__link">
-                    <span>Upload</span>
-                  </a>
-                </li>
-              </ul>
               <li class="air__menuLeft__category">
-                <span>Information</span>
+                <span>Other</span>
               </li>
               <li class="air__menuLeft__item">
                 <a href="javascript: void(0)" class="air__menuLeft__link air__sidebar__actionToggle">
@@ -200,10 +185,40 @@
                     <span>Settings</span>
                 </a>
               </li>
-        
-            </li>
-        </div> 
-      </div> 
+              <li class="air__menuLeft__item air__menuLeft__submenu">
+                <a href="javascript: void(0)" class="air__menuLeft__link">
+                  <i class="fe fe-settings air__menuLeft__icon"></i>
+                <span>User Settings</span>
+                </a>
+                <ul class="air__menuLeft__list">
+                  <li class="air__menuLeft__item">
+                    <a href="/table4" class="air__menuLeft__link">
+                      <span>Log</span>
+                    </a>
+                  </li>
+                  <li class="air__menuLeft__item">
+                    <a href="/upload" class="air__menuLeft__link">
+                      <span>Upload</span>
+                    </a>
+                  </li>
+                  <li class="air__menuLeft__item">
+                    <a href="{{ route('client.password.create') }}" class="air__menuLeft__link">
+                      <span>Change Password</span>
+                    </a>
+                  </li>
+                  <li class="air__menuLeft__item">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="air__menuLeft__link">
+                      <span>Logout</span>
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                    </form>
+                  </li>
+                </ul>
+              </li>
+          </ul>
+        </div>
+      </div>
     </div> 
     <div class="air__menuLeft__backdrop air__menuLeft__mobileActionToggle"></div>
     <div class="air__sidebar">
@@ -454,253 +469,10 @@
         </div>
       </div>
     </div>
-
+    
     <div class="air__layout">
       <div class="air__layout__header">
         <div class="air__utils__header">
-          <div class="air__topbar">
-            <div class="air__topbar__searchDropdown dropdown mr-md-4 mr-auto">
-              <div class="air__topbar__search dropdown-toggle" data-toggle="dropdown" data-offset="5,15">
-                <div class="air__topbar__searchContainer">
-                  <i class="air__topbar__searchIcon fe fe-search"></i>
-                  <input
-                    class="air__topbar__searchInput"
-                    type="text"
-                    placeholder="Start typing to search..."
-                  />
-                </div>
-              </div>
-              <div class="dropdown-menu" role="menu">
-                <div class="air__customScroll">
-                  <div class="air__l1 height-300">
-                    <div class="text-uppercase font-size-12 mb-2 text-gray-6">Documents (3)</div>
-                    <ul class="list-unstyled">
-                      <li class="air__l1__item">
-                        <a href="javascript: void(0);" class="air__l1__itemLink">
-                          <div class="air__l1__itemPic mr-3">
-                            <i class="air__l1__itemIcon fe fe-file"></i>
-                          </div>
-                          <div>
-                            <div class="text-blue">Something important.pdf</div>
-                            <div class="text-muted">568kb</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="air__l1__item">
-                        <a href="javascript: void(0);" class="air__l1__itemLink">
-                          <div class="air__l1__itemPic mr-3">
-                            <i class="air__l1__itemIcon fe fe-file"></i>
-                          </div>
-                          <div>
-                            <div class="text-blue">Queue Info.pdf</div>
-                            <div class="text-muted">1.2mb</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="air__l1__item">
-                        <a href="javascript: void(0);" class="air__l1__itemLink">
-                          <div class="air__l1__itemPic mr-3">
-                            <i class="air__l1__itemIcon fe fe-file"></i>
-                          </div>
-                          <div>
-                            <div class="text-blue">Something even more important.pdf</div>
-                            <div class="text-muted">67mb</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-            
-                    </ul>
-                  </div> 
-                </div>
-              </div>
-            </div> 
-            <div class="dropdown mr-auto d-none d-md-block">
-              <a
-                href=""
-                class="dropdown-toggle text-nowrap"
-                data-toggle="dropdown"
-                aria-expanded="false"
-                data-offset="0,15"
-              >
-                <i class="dropdown-toggle-icon fe fe-book-open"></i>
-                <span class="dropdown-toggle-text">Recent</span>
-              </a>
-              <div class="dropdown-menu" role="menu">
-        <!--        <div class="dropdown-header">Active</div> -->
-                <a class="dropdown-item" href="javascript:void(0)">EPRT Test</a>
-                <a class="dropdown-item" href="javascript:void(0)">ECCT Test</a>
-        
-              </div>
-            </div>
-            <p class="mb-0 mr-4 d-xl-block d-none">
-              Status
-              <span class="ml-1 badge bg-success text-white font-size-12 text-uppercase air__topbar__status"
-                >Online</span
-              >
-            </p>
-            <div class="dropdown mr-4 d-none d-sm-block">
-              <a href="" class="dropdown-toggle text-nowrap" data-toggle="dropdown" data-offset="5,15">
-                <span class="dropdown-toggle-text">EN</span>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" role="menu">
-                <a class="dropdown-item" href="javascript:void(0)"
-                  ><span class="text-uppercase font-size-12 mr-1 align-text-bottom">EN</span> English</a
-                >
-                <a class="dropdown-item" href="javascript:void(0)"
-                  ><span class="text-uppercase font-size-12 mr-1 align-text-bottom">ID</span> Bahasa</a
-                >
-              </div>
-            </div>
-            <div class="air__topbar__actionsDropdown dropdown mr-4 d-none d-sm-block">
-              <a
-                href=""
-                class="dropdown-toggle text-nowrap"
-                data-toggle="dropdown"
-                aria-expanded="false"
-                data-offset="0,15"
-              >
-                <i class="dropdown-toggle-icon fe fe-menu"></i>
-                <span class="dropdown-toggle-text">Actions</span>
-              </a>
-              <div class="air__topbar__actionsDropdownMenu dropdown-menu dropdown-menu-right" role="menu">
-                <div class="card-header card-header-flex">
-                  <ul
-                    class="nav nav-tabs nav-tabs-line nav-tabs-line-bold nav-tabs-noborder nav-tabs-stretched flex-nowrap"
-                  >
-                    <li class="nav-item" role="tablist">
-                      <a
-                        href="#tab-alert-content"
-                        class="nav-link active"
-                        id="tab-alert"
-                        data-toggle="tab"
-                        aria-selected="true"
-                      >
-                        Alerts
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        href="#tab-events-content"
-                        class="nav-link"
-                        id="tab-events"
-                        data-toggle="tab"
-                        aria-selected="false"
-                      >
-                        Events
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        href="#tab-actions-content"
-                        class="nav-link"
-                        id="tab-actions"
-                        data-toggle="tab"
-                        aria-selected="false"
-                      >
-                        Actions
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-body">
-                  <div class="height-300 air__customScroll">
-                    <div class="tab-content">
-                      <div
-                        class="tab-pane fade show active"
-                        id="tab-alert-content"
-                        role="tabpanel"
-                        aria-labelledby="tab-alert-content"
-                      >
-                        <ul class="width-250 list-unstyled">
-                          <li class="mb-3">
-                            <div class="air__l2__head">
-                              <p class="air__l2__title">
-                                Test Result:
-                                <strong class="text-black">Passed</strong>
-                              </p>
-                              <time class="air__l2__time">5 min ago</time>
-                            </div>
-                            <p class="air__l2__content">
-                              Check your email for your certificate.
-                            </p>
-                          </li>
-                       
-                        </ul>
-                      </div>
-                      <div
-                        class="tab-pane fade"
-                        id="tab-events-content"
-                        role="tabpanel"
-                        aria-labelledby="tab-alert-content"
-                      >
-                        <div class="width-250">
-                          No Events
-                        </div>
-                      </div>
-                      <div
-                        class="tab-pane fade"
-                        id="tab-actions-content"
-                        role="tabpanel"
-                        aria-labelledby="tab-alert-content"
-                      >
-                        <div class="width-250">
-                          No Actions
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="dropdown">
-              <a
-                href=""
-                class="dropdown-toggle text-nowrap"
-                data-toggle="dropdown"
-                aria-expanded="false"
-                data-offset="5,15"
-              >
-                <img
-                  class="dropdown-toggle-avatar"
-                  src="../../components/core/img/avatars/avatar-2.png"
-                  alt="User avatar"
-                />
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" role="menu">
-                <a class="dropdown-item" href="javascript:void(0)">
-                  <i class="dropdown-icon fe fe-user"></i>
-                  Profile
-                </a>
-                <div class="dropdown-divider"></div>
-                <div class="dropdown-header">
-                  Home
-                </div>
-                <a class="dropdown-item" href="javascript:void(0)">
-                  <i class="dropdown-icon fe fe-chevron-right"></i>
-                  System Dashboard
-                </a>
-                <a class="dropdown-item" href="javascript:void(0)">
-                  <i class="dropdown-icon fe fe-chevron-right"></i>
-                  User Boards
-                </a>
-                <a class="dropdown-item" href="javascript:void(0)">
-                  <i class="dropdown-icon fe fe-chevron-right"></i>
-                  Issue Navigator
-                  <span class="badge badge-success font-size-11 ml-2">25 New</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{{ route('client.password.create') }}">
-                    {{ __('Change password') }}
-                  </a>
-                  <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                      {{ __('Logout') }}
-                  </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">  @csrf </form>
-              </div>
-            </div>
-
-          </div>
           <div class="air__subbar">
             <ul class="air__subbar__breadcrumbs mr-4">
               <li class="air__subbar__breadcrumb">
@@ -712,43 +484,6 @@
                 >
               </li>
             </ul>
-    <!--        <div class="air__subbar__divider mr-4 d-none d-xl-block"></div>
-            <p class="color-gray-4 text-uppercase font-size-18 mb-0 mr-4 d-none d-xl-block">INV-00125</p>
-            <button class="btn btn-primary btn-with-addon mr-auto text-nowrap d-none d-md-block">
-              <span class="btn-addon">
-                <i class="btn-addon-icon fe fe-plus-circle"></i>
-              </span>
-              New Request
-            </button>
-            <div class="air__subbar__amount mr-3 ml-auto d-none d-sm-flex">
-              <p class="air__subbar__amountText">
-                This month
-                <span class="air__subbar__amountValue">$251.12</span>
-              </p>
-              <div class="air__subbar__amountGraph">
-                <i class="air__subbar__amountGraphItem" style="height: 80%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 50%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 70%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 60%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 50%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 65%"></i>
-              </div>
-            </div>
-            <div class="air__subbar__amount d-none d-sm-flex">
-              <p class="air__subbar__amountText">
-                Last month
-                <span class="air__subbar__amountValue">$12,256.12</span>
-              </p>
-              <div class="air__subbar__amountGraph">
-                <i class="air__subbar__amountGraphItem" style="height: 60%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 65%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 75%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 55%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 100%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 85%"></i>
-              </div>
-            </div> -->
-          </div>
         </div>
       </div> 
       <div class="air__layout__content">
@@ -757,19 +492,7 @@
   <h5>Very Cool Edit Form</h5>
 </div>
 
-<!-- <div class="card">
-  <div class="card-body">
-    <h4 class="mb-4">
-      <strong>Form</strong>
-    </h4>
-    <form action="task/store" method="post">
-		{{ csrf_field() }}
-		Nama <input type="text" name="name" required="required"> <br/>
-		NIM <input type="number" name="NIM" required="required"> <br/>
-		email <input type="text" name="email" required="required"> <br/>
-		book <input type name="book" required="required"><br/>
-		<input type="submit" value="Upload">
-	</form> -->
+
 
   <div class="card-body">
     <h4 class="mb-4">
@@ -793,47 +516,6 @@
 	</div>
 </div>
 
- <!--     <div class="form-row">
-      <form action="/Task/store" method="post">
-      
-        <div class="form-group col-md-6">
-          <label for="inputfirstname">Name</label>
-          <input type="text" class="form-control" id="name" name="name"/>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputlastname">NIM</label>
-          <input type="number" class="form-control" id="NIM" name="NIM"/>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputemail">Email</label>
-        <input type="text" class="form-control" id="email"  name="name" placeholder="example@mail.com" />
-      </div>
-      <div class="form-group">
-      <label for="jasa">Service Type</label>
-           <select class="selectpicker">
-                <option>Regular - 50,000</option>
-                <option>Express - 75,000</option>
-           </select>
-      </div>
-      <div class="form-group">
-        <label for="bookT">Book Title</label>
-        <input type="book" class="form-control" id="book" name="book" placeholder="Harry Potter" />
-      </div>       
-      <div class="form-row">
-        <div class="form-group col-md-12">
-          <label>Upload Document</label>
-          <input type="file" class="dropify" />
-        </div> 
-      </div>
-      <div class="form-group">
-        <label class="air__utils__control air__utils__control__checkbox">
-          <input type="checkbox" checked="checked" />
-          <span class="air__utils__control__indicator"></span>
-          I VERIFY THAT THE ABOVE FILE IS CORRECT.
-        </label>
-      </div>
-      <input type="submit" value="Simpan Data"> -->
 </div>
 </script>
       </div>
