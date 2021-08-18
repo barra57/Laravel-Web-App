@@ -19,6 +19,11 @@ use App\Http\Controllers\EditUploadController;
 use App\Http\Controllers\DeleteUploadController;
 use App\Http\Controllers\DownloadUploadController;
 use App\Http\Controllers\TerjemahController;
+use App\Http\Controllers\CreateTerjemahController;
+use App\Http\Controllers\DeleteTerjemahController;
+use App\Http\Controllers\EditTerjemahController;
+use App\Http\Controllers\HasilTerjemahController;
+use App\Http\Controllers\PembayaranTerjemahController;
 use App\Http\Controllers\TestsController;
 use App\Http\Controllers\ResultsController;
 use App\Http\Controllers\HomeController;
@@ -81,14 +86,14 @@ Route::group(['as' => 'client.', 'middleware' => ['auth']], function () {
     Route::get('/download/{file}',[DownloadUploadController::class,'download']);
 
     Route::get('/terjemah', [TerjemahController::class,'index']);
-    Route::get('/formterjemah',[TerjemahController::class,'create']);
-    Route::post('store',[TerjemahController::class,'store']);
-    Route::get('/terjemah/destroy/{id}',[TerjemahController::class,'destroy']);
-    Route::get('/terjemah/pembayaran/{id}',[TerjemahController::class,'pembayaran']);
+    Route::get('/formterjemah',[CreateTerjemahController::class,'create']);
+    Route::post('store',[CreateTerjemahController::class,'store']);
+    Route::get('/terjemah/destroy/{id}',[DeleteTerjemahController::class,'destroy']);
+    Route::get('/terjemah/pembayaran/{id}',[PembayaranTerjemahController::class,'pembayaran']);
     Route::get('/terjemah/show/{id}',[TerjemahController::class,'show']);
-    Route::get('/terjemah/edit7/{id}',[TerjemahController::class,'edit7']);
-    Route::post('/update7',[TerjemahController::class,'update7']);
-    Route::get('/terjemah/hasil/{id}',[TerjemahController::class,'hasil']);
+    Route::get('/terjemah/edit7/{id}',[EditTerjemahController::class,'edit7']);
+    Route::post('/update7',[EditTerjemahController::class,'update7']);
+    Route::get('/terjemah/hasil/{id}',[HasilTerjemahController::class,'hasil']);
 
     Route::post('task/store',[TaskController::class,'store']);
     Route::get('form',[TaskController::class,'form']);
