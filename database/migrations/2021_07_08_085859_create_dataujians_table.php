@@ -14,10 +14,12 @@ class CreateDataujiansTable extends Migration
     public function up()
     {
         Schema::create('dataujians', function (Blueprint $table) {
-            $table->string('Nama',64);
-            $table->increments('NIM');
-            $table->string('Jurusan',32);
+            $table->increments('No');
+            $table->string('Nama');
+            $table->date('Tanggaldaftar');
             $table->string('Ujian',32);
+            $table->date('Tanggalujian');
+            $table->integer('Sesi'11);
             $table->timestamps();
         });
     }

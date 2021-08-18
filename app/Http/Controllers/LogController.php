@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\logs;
 
 class LogController extends Controller
@@ -19,26 +18,4 @@ class LogController extends Controller
     $table = logs::all();
     return view ('table4',['logs'=>$table]);
    }
-   public function store4(Request $request)
-   {
-	
-	DB::table('logs')->insert([
-		'name' => $request->name,
-		'NIM' => $request->NIM,
-		'email' => $request->email,
-	//	'service' => $request->service,
-        'logs' => $request->logs
-	]);
-	    
-	    return redirect('/table4');
- 
-    }
-    public function delete4($NIM)
-    {
-	    
-	    DB::table('logs')->where('NIM',$NIM)->delete();
-		
-	    
-	    return redirect('/table4');
-    }
 }

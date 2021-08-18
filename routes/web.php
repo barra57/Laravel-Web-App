@@ -4,11 +4,20 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\ControllerKP;
+use App\Http\Controllers\LanguageTestController;
+use App\Http\Controllers\CreateLanguageTestController;
+use App\Http\Controllers\EditLanguageTestController;
+use App\Http\Controllers\DeleteLanguageTestController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\LogController;
+use App\Http\Controllers\CreateLogController;
+use App\Http\Controllers\DeleteLogController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\ProccesUploadController;
+use App\Http\Controllers\EditUploadController;
+use App\Http\Controllers\DeleteUploadController;
+use App\Http\Controllers\DownloadUploadController;
 use App\Http\Controllers\TerjemahController;
 use App\Http\Controllers\TestsController;
 use App\Http\Controllers\ResultsController;
@@ -42,30 +51,35 @@ Route::get('/', function () {
 Route::group(['as' => 'client.', 'middleware' => ['auth']], function () {
     Route::get('home', [HomeController::class,'redirect']);
     Route::get('dashboard', [HomeController::class,'index'])->name('home');
+
     Route::get('change-password', [ChangePasswordController::class,'create'])->name('password.create');
     Route::post('change-password', [ChangePasswordController::class,'update'])->name('password.update');
+
     Route::get('test', [TestsController::class,'index'])->name('test');
     Route::post('test', [TestsController::class,'store'])->name('test.store');
+
     Route::get('results/{result_id}', [ResultsController::class,'show'])->name('results.show');
     Route::get('send/{result_id}', [ResultsController::class,'send'])->name('results.send');
 
-    Route::get('dataujian',[ControllerKP::class,'index2']);
-    Route::get('inputdataujian',[ControllerKP::class,'insert']);
-    Route::post('insertdb',[ControllerKP::class,'insertdb']);
-    Route::get('/dataujian/edit/{Nim}',[ControllerKP::class,'edit']);
-    Route::post('/update',[ControllerKP::class,'update']);
-    Route::get('/dataujian/hapus/{Nim}',[ControllerKP::class,'hapus']);
+    Route::get('dataujian',[LanguageTestController::class,'index2']);
+    Route::get('inputdataujian',[CreateLanguageTestController::class,'insert']);
+    Route::post('insertdb',[CreateLanguageTestController::class,'insertdb']);
+    Route::get('/dataujian/edit/{Nim}',[EditLanguageTestController::class,'edit']);
+    Route::post('/update',[EditLanguageTestController::class,'update']);
+    Route::get('/dataujian/hapus/{Nim}',[DeleteLanguageTestController::class,'hapus']);
 
-    Route::post('store4',[LogController::class,'store4']);
     Route::get('form4',[LogController::class,'form4']);
     Route::get('table4',[LogController::class,'table4']);
-    Route::get('/logs/delete4/{NIM}',[LogController::class,'delete4']);
-    Route::get('/tabelfileupload/edit5/{id}',[UploadController::class,'edit5']);
-    Route::post('/update5',[UploadController::class,'update5']);
-    Route::get('/upload/delete5/{id}',[UploadController::class,'delete5']);
+    Route::get('/logs/delete4/{NIM}',[DeleteLogController::class,'delete4']);
+    Route::post('store4',[CreateLogController::class,'store4']);
+
     Route::get('/upload',[UploadController::class,'upload']);
-    Route::post('/upload/proses',[UploadController::class,'proses_upload']);
-    Route::get('/download/{file}',[UploadController::class,'download']);
+    Route::post('/upload/proses',[ProccesUploadController::class,'proses_upload']);
+    Route::get('/tabelfileupload/edit5/{id}',[EditUploadController::class,'edit5']);
+    Route::post('/update5',[EditUploadController::class,'update5']);
+    Route::get('/upload/delete5/{id}',[DeleteUploadController::class,'delete5']);    
+    Route::get('/download/{file}',[DownloadUploadController::class,'download']);
+
     Route::get('/terjemah', [TerjemahController::class,'index']);
     Route::get('/formterjemah',[TerjemahController::class,'create']);
     Route::post('store',[TerjemahController::class,'store']);
@@ -77,15 +91,16 @@ Route::group(['as' => 'client.', 'middleware' => ['auth']], function () {
     Route::get('/terjemah/hasil/{id}',[TerjemahController::class,'hasil']);
 
     Route::post('task/store',[TaskController::class,'store']);
-    Route::post('store2',[CourseController::class,'store2']);
     Route::get('form',[TaskController::class,'form']);
-    Route::get('form2',[CourseController::class,'form2']);
     Route::get('table3',[TaskController::class,'table']);
-    Route::get('table2',[CourseController::class,'table2']);
     Route::get('/tabletranslate/edit3/{NIM}',[TaskController::class,'edit']);
+    Route::get('/tabletranslate/delete/{NIM}',[TaskController::class,'delete']);
+
+    Route::post('store2',[CourseController::class,'store2']);
+    Route::get('form2',[CourseController::class,'form2']);
+    Route::get('table2',[CourseController::class,'table2']);
     Route::get('/tablecourses/edit2/{NIM}',[CourseController::class,'edit2']);
     Route::post('/update2',[CourseController::class,'update2']);
-    Route::get('/tabletranslate/delete/{NIM}',[TaskController::class,'delete']);
     Route::get('/tablecourses/delete2/{NIM}',[CourseController::class,'delete2']);
 });
 

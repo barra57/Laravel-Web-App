@@ -494,6 +494,8 @@
             <td>Tipe Ujian</td>
             <td>Tanggal Ujian</td>
             <td>Sesi</td>
+            <td>Edit</td>
+            <td>Delete</td>
           </tr>
         </thead>
         <tbody>
@@ -505,7 +507,8 @@
             <td>{{$ujian['Ujian']}}</td>
             <td>{{$ujian['Tanggalujian']}}</td>
             <td>{{$ujian['Sesi']}}</td>
-            <td><a href="/dataujian/edit/{{ $ujian->No }}"><button type="button" class="btn btn-success"><i class="fe fe-edit mr-1" aria-hidden="true"></i>Edit</button></a><a href="/dataujian/hapus/{{ $ujian->No }}"><span class="btn btn-danger mr-1 mb-1">Hapus</span></a></td>
+            <td><a href="/dataujian/edit/{{ $ujian->No }}"><button type="button" class="btn btn-success"><i class="fe fe-edit mr-1" aria-hidden="true"></i>Edit</button></a></td>
+            <td><a href="/dataujian/hapus/{{ $ujian->No }}"><span class="btn btn-danger mr-1 mb-1">X</span></a></td>
           </tr>
           @endforeach
         </tbody>
