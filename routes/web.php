@@ -101,12 +101,12 @@ Route::group(['as' => 'client.', 'middleware' => ['auth']], function () {
     Route::get('/tabletranslate/edit3/{NIM}',[TaskController::class,'edit']);
     Route::get('/tabletranslate/delete/{NIM}',[TaskController::class,'delete']);
 
-    Route::post('store2',[CourseController::class,'store2']);
+    Route::post('store2',[CreateCourseController::class,'store2']);
     Route::get('form2',[CourseController::class,'form2']);
     Route::get('table2',[CourseController::class,'table2']);
-    Route::get('/tablecourses/edit2/{NIM}',[CourseController::class,'edit2']);
-    Route::post('/update2',[CourseController::class,'update2']);
-    Route::get('/tablecourses/delete2/{NIM}',[CourseController::class,'delete2']);
+    Route::get('/tablecourses/edit2/{NIM}',[EditCourseController::class,'edit2']);
+    Route::post('/update2',[EditCourseController::class,'update2']);
+    Route::get('/tablecourses/delete2/{NIM}',[DeleteCourseController::class,'delete2']);
 });
 
 Auth::routes();
