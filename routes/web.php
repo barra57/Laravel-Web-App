@@ -13,6 +13,9 @@ use App\Http\Controllers\CreateCourseController;
 use App\Http\Controllers\EditCourseController;
 use App\Http\Controllers\DeleteCourseController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\CreateTaskController;
+use App\Http\Controllers\EditTaskController;
+use App\Http\Controllers\DeleteTaskController;
 use App\Http\Controllers\LogController;
 use App\Http\Controllers\CreateLogController;
 use App\Http\Controllers\DeleteLogController;
@@ -98,11 +101,11 @@ Route::group(['as' => 'client.', 'middleware' => ['auth']], function () {
     Route::post('/update7',[EditTerjemahController::class,'update7']);
     Route::get('/terjemah/hasil/{id}',[HasilTerjemahController::class,'hasil']);
 
-    Route::post('task/store',[TaskController::class,'store']);
+    Route::post('task/store',[CreateTaskController::class,'store']);
     Route::get('form',[TaskController::class,'form']);
     Route::get('table3',[TaskController::class,'table']);
-    Route::get('/tabletranslate/edit3/{NIM}',[TaskController::class,'edit']);
-    Route::get('/tabletranslate/delete/{NIM}',[TaskController::class,'delete']);
+    Route::get('/tabletranslate/edit3/{NIM}',[EditTaskController::class,'edit']);
+    Route::get('/tabletranslate/delete/{NIM}',[DeleteTaskController::class,'delete']);
 
     Route::post('store2',[CreateCourseController::class,'store2']);
     Route::get('form2',[CourseController::class,'form2']);
