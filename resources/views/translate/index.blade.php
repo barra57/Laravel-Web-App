@@ -484,7 +484,7 @@
   <div class="card-body">
   <h4 class="mb-4">
       <strong>Terjemahan</strong>
-      <a class="btn btn-primary" href="/formterjemah" role="button" style="position:absolute; right: 20px; top: 20px;">Daftar</a>
+      <a class="btn btn-primary" href="/translate/create" role="button" style="position:absolute; right: 20px; top: 20px;">Daftar</a>
     </h4>
     <div class="row">
         <div class="col-lg-12">
@@ -509,11 +509,11 @@
                             <td>{{$x['TanggalDaftar']}}</td>
                             <td>{{$x['Penerjemah']}}</td>
                             <td>
-                                <a class="btn btn-primary" href="/terjemah/show/{{$x->id}}" role="button">View</a>
-                                <a class="btn btn-primary" href="/terjemah/edit7/{{$x->id}}" role="button">Edit</a>
-                                <a class="btn btn-primary" href="/terjemah/destroy/{{$x->id}}" role="button">Delete</a>
-                                <a class="btn btn-primary" href="/terjemah/pembayaran/{{$x->id}}" role="button">Pembayaran</a>
-                                <a class="btn btn-primary" href="/terjemah/hasil/{{$x->id}}" role="button">Hasil</a>
+                                <a class="btn btn-primary" href="/translate/show/{{$x->id}}" role="button">View</a>
+                                <a class="btn btn-primary" href="/translate/edit/{{$x->id}}" role="button">Edit</a>
+                                <a class="btn btn-primary" href="/translate/destroy/{{$x->id}}" role="button">Delete</a>
+                                <a class="btn btn-primary" href="/translate/payment/{{$x->id}}" role="button">Pembayaran</a>
+                                <a class="btn btn-primary" href="/translate/result/{{$x->id}}" role="button">Hasil</a>
                             </td> 
                         </tr>
                     @endforeach

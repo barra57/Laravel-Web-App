@@ -488,7 +488,7 @@
     </h4>
       <div class="form-group"> 
     	@foreach($tabelterjemahs as $k)
-		  <form action="/update7" method="POST">
+		  <form action="/update" method="POST">
 		  {{ csrf_field() }}
         <input type="hidden" name="id" value="{{ $k->id }}">
         <label for="TextTerjemahan">Translate Text</label>

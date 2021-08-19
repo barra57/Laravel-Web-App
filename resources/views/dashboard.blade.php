@@ -209,7 +209,7 @@
                     </a>
                     <ul class="air__menuLeft__list">
                         <li class="air__menuLeft__item">
-                        <a href="/terjemah" class="air__menuLeft__link">
+                        <a href="/translate" class="air__menuLeft__link">
                             <span>Terjemahan</span>
                         </a>
                         </li>
