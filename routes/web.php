@@ -32,6 +32,8 @@ use App\Http\Controllers\Translate\DeleteTerjemahController;
 use App\Http\Controllers\Translate\EditTerjemahController;
 use App\Http\Controllers\Translate\HasilTerjemahController;
 use App\Http\Controllers\Translate\PembayaranTerjemahController;
+use App\Http\Controllers\Translate\ConfirmpaymentController;
+use App\Http\Controllers\Translate\PaymentstatusController;
 use App\Http\Controllers\TestsController;
 use App\Http\Controllers\ResultsController;
 use App\Http\Controllers\HomeController;
@@ -106,6 +108,8 @@ Route::group(['as' => 'client.', 'middleware' => ['auth']], function () {
     Route::get('translate/edit/{id}',[EditTerjemahController::class,'edit']);
     Route::post('translate/update',[EditTerjemahController::class,'update']);
     Route::get('translate/result/{id}',[HasilTerjemahController::class,'result']);
+    Route::get('translate/confirmpayment', [ConfirmpaymentController::class,'index']);
+    Route::get('translate/paymentstatus', [PaymentstatusController::class,'index']);
 
     Route::post('task/store',[CreateTaskController::class,'store']);
     Route::get('form',[TaskController::class,'form']);
