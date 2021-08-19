@@ -35,6 +35,9 @@ use App\Http\Controllers\ResultsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\chart\chartkursus;
+use App\Http\Controllers\chart\chartterjemahan;
+use App\Http\Controllers\chart\charttes;
 use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\HomeController as HomeAdmin;
 use App\Http\Controllers\Admin\OptionsController;
@@ -115,6 +118,11 @@ Route::group(['as' => 'client.', 'middleware' => ['auth']], function () {
     Route::get('course/index/edit/{NIM}',[EditCourseController::class,'edit']);
     Route::post('/update',[EditCourseController::class,'update']);
     Route::get('course/index/destroy/{NIM}',[DeleteCourseController::class,'destroy']);
+
+    Route::get('chart/chartkursus',[chartkursus::class,'index']);
+    Route::get('chart/chartterjemahan',[chartterjemahan::class,'index']);
+    Route::get('chart/charttes',[charttes::class,'index']);
+
 
     Route::resource('photo', 'PhotoController');
 });
