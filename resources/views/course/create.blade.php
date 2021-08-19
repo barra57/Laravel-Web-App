@@ -168,11 +168,11 @@
                 <span>Translate</span>
               </a>
               </a>
-              <a href="/course/index" class="air__menuLeft__link">
+              <a href="/table2" class="air__menuLeft__link">
               <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
                 <span>Course</span>
               </a>
-              <a href="/languagetest/index" class="air__menuLeft__link">
+              <a href="/dataujian" class="air__menuLeft__link">
               <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
                 <span>Language Test</span>
               </a>
@@ -192,12 +192,12 @@
                 </a>
                 <ul class="air__menuLeft__list">
                   <li class="air__menuLeft__item">
-                    <a href="/log/index" class="air__menuLeft__link">
+                    <a href="/table4" class="air__menuLeft__link">
                       <span>Log</span>
                     </a>
                   </li>
                   <li class="air__menuLeft__item">
-                    <a href="/upload/index" class="air__menuLeft__link">
+                    <a href="/upload" class="air__menuLeft__link">
                       <span>Upload</span>
                     </a>
                   </li>
@@ -469,313 +469,175 @@
         </div>
       </div>
     </div>
-
     
     <div class="air__layout">
+      <div class="air__layout__header">
+        <div class="air__utils__header">
+          <div class="air__subbar">
+            <ul class="air__subbar__breadcrumbs mr-4">
+              <li class="air__subbar__breadcrumb">
+                <a href="#" class="air__subbar__breadcrumbLink">Main</a>
+              </li>
+              <li class="air__subbar__breadcrumb">
+                <a href="#" class="air__subbar__breadcrumbLink air__subbar__breadcrumbLink--current"
+                  >Form Course</a
+                >
+              </li>
+            </ul>
+    <!--        <div class="air__subbar__divider mr-4 d-none d-xl-block"></div>
+            <p class="color-gray-4 text-uppercase font-size-18 mb-0 mr-4 d-none d-xl-block">INV-00125</p>
+            <button class="btn btn-primary btn-with-addon mr-auto text-nowrap d-none d-md-block">
+              <span class="btn-addon">
+                <i class="btn-addon-icon fe fe-plus-circle"></i>
+              </span>
+              New Request
+            </button>
+            <div class="air__subbar__amount mr-3 ml-auto d-none d-sm-flex">
+              <p class="air__subbar__amountText">
+                This month
+                <span class="air__subbar__amountValue">$251.12</span>
+              </p>
+              <div class="air__subbar__amountGraph">
+                <i class="air__subbar__amountGraphItem" style="height: 80%"></i>
+                <i class="air__subbar__amountGraphItem" style="height: 50%"></i>
+                <i class="air__subbar__amountGraphItem" style="height: 70%"></i>
+                <i class="air__subbar__amountGraphItem" style="height: 60%"></i>
+                <i class="air__subbar__amountGraphItem" style="height: 50%"></i>
+                <i class="air__subbar__amountGraphItem" style="height: 65%"></i>
+              </div>
+            </div>
+            <div class="air__subbar__amount d-none d-sm-flex">
+              <p class="air__subbar__amountText">
+                Last month
+                <span class="air__subbar__amountValue">$12,256.12</span>
+              </p>
+              <div class="air__subbar__amountGraph">
+                <i class="air__subbar__amountGraphItem" style="height: 60%"></i>
+                <i class="air__subbar__amountGraphItem" style="height: 65%"></i>
+                <i class="air__subbar__amountGraphItem" style="height: 75%"></i>
+                <i class="air__subbar__amountGraphItem" style="height: 55%"></i>
+                <i class="air__subbar__amountGraphItem" style="height: 100%"></i>
+                <i class="air__subbar__amountGraphItem" style="height: 85%"></i>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div> 
       <div class="air__layout__content">
         <div class="air__utils__content">
           <div class="air__utils__heading"> 
-              <h5>Very Cool Dashboard</h5>
-          </div>
-
-                    @if(session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-<div class="row">
-  <div class="col-lg-6">
-    <div class="card air__utils__cardMarked air__utils__cardMarked--primary">
-      <div class="card-header card-header-flex">
-        <div class="d-flex flex-column justify-content-center">
-          <h5 class="mb-0">Introduction</h5>
-        </div>
-        <div class="ml-auto d-flex flex-column justify-content-center">
-          <div>
-          
-          </div> 
-        </div>
-      </div>
-      <div class="card-body">
-        <h3 class="text-dark font-size-18 font-weight-bold mb-3">Welcome to the Language Center</h3>
-        <p>
-          First time here? Check out down below.
-        </p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-          a galley of type and scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting, remaining essentially
-          unchanged.
-        </p>
-        <a href="javascript: void(0);" class="btn btn-outline-primary mb-1">Read more</a>
-      </div>
-    </div>
-    <div class="card air__utils__cardMarked air__utils__cardMarked--primary">
-      <div class="card-header card-header-flex">
-        <div class="d-flex flex-column justify-content-center">
-          <h5 class="mb-0">Announcement</h5>
-        </div>
-        <div class="ml-auto d-flex flex-column justify-content-center">
-          <div>
-      
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p class="text-uppercase text-muted mb-3">
-        Admin ELC
-        </p>
-        <p class="mb-4">
-        Monthly Maintenance
-        </p>
-        <p class="text-uppercase text-muted mb-3">
-        Admin ELC
-        </p>
-        <p class="mb-4">
-        Monthly Maintenance
-        </p>
-        <p class="text-uppercase text-muted mb-3">
-        Admin ELC
-        </p>
-        <p class="mb-4">
-        Monthly Maintenance
-        </p>
-        <a href="javascript: void(0);" class="btn btn-outline-primary mb-1">View history</a>
-      </div>
-    </div>
-    
-
-    <div class="card air__utils__cardMarked air__utils__cardMarked--primary">
-      <div class="card-header card-header-flex">
-        <div class="d-flex flex-column justify-content-center">
-          <h5 class="mb-0">Users Online</h5>
-        </div>
-        <div class="ml-auto d-flex flex-column justify-content-center">
-          <div>
-      
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="mb-3">
-          <div class="bg-gray-1 text-gray-6 text-uppercase px-3 py-1 mb-2">
-            Users Online 
-          </div>
-          <div class="table-responsive">
-            <table class="table table-borderless text-gray-6 mb-0">
-              <tbody>
-               
-                <tr>
-                  <td>Donald</td>
-                  <td class="text-right"><strong>1303184041</strong></td>
-                </tr>
-                                 
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="air__g6 pt-3">
-        <div class="air__g6__status bg-success"></div>
-        <div class="d-flex flex-nowrap align-items-center pb-3 pl-4 pr-4">
-          <div class="mr-auto">
-            <div class="text-uppercase font-weight-bold font-size-24 text-dark">You've Passed!</div>
-            <div class="font-size-18">Check your student email for your certificate.</div>
-          </div>
-          <div class="ml-1 text-success">
-          </div>
-        </div>
-        <div class="py-3 bg-gray-1 pl-4">
-          From Admin ELC
-        </div>
-      </div>
-    </div>
-  </div> 
-  <div class="col-lg-6">
-    <div class="card air__utils__cardMarked air__utils__cardMarked--primary">
-      <div class="card-header card-header-flex">
-        <div class="d-flex flex-column justify-content-center">
-          <h5 class="mb-0">Language Test</h5>
-        </div>
-        <div class="ml-auto d-flex flex-column justify-content-center">
-          <div>
-        
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-      <h3 class="text-dark font-size-18 font-weight-bold mb-3">Types of Test</h3> 
-        <p>
-        </p>
-        <p>
-           <a href="javascript: void(0);" class="text-blue">EPRT Online Edition</a>
-        </p> 
-        <p>
-           <a href="javascript: void(0);" class="text-blue">ECCT Online Edition</a>
-        </p>
-        <p>
-           <a href="javascript: void(0);" class="text-blue">TOEFL ITP® Online Remote Proctoring</a> 
-        </p> 
-       
-      </div>
-    </div>
-    <div class="card air__utils__cardMarked air__utils__cardMarked--primary">
-      <div class="card-header card-header-flex">
-        <div class="d-flex flex-column justify-content-center">
-          <h5 class="mb-0">Schedule Feed</h5>
-        </div>
-        <div class="ml-auto d-flex flex-column justify-content-center">
-          <div>
-      
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="mb-3">
-          <div class="bg-gray-1 text-gray-6 text-uppercase px-3 py-1 mb-2">
-            Today - 5 JULY 2021
-          </div>
-          <div class="table-responsive">
-            <table class="table table-borderless text-gray-6 mb-0">
-              <tbody>
-                <tr>
-                  <td>EPRT Online Edition</td>
-                  <td class="text-right"><strong>8.00 AM</strong></td>
-                </tr>
-                <tr>
-                  <td>EPRT Online Edition</td>
-                  <td class="text-right"><strong>10.30 AM</strong></td>
-                </tr>
-                <tr>
-                  <td>ECCT Online Edition</td>
-                  <td class="text-right"><strong>1.30 PM</strong></td>
-                </tr>
-                <tr>
-                  <td>ECCT Online Edition</td>
-                  <td class="text-right"><strong>4.00 PM</strong></td>
-                </tr>
-                <tr>
-                  <td>TOEFL ITP® Online Remote Proctoring</td>
-                  <td class="text-right"><strong>4.30 PM</strong></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div>
-          <div class="bg-gray-1 text-gray-6 text-uppercase px-3 py-1 mb-2">
-            TOMMOROW - 6 JULY 2021
-          </div>
-          <div class="table-responsive">
-            <table class="table table-borderless text-muted mb-0">
-              <tbody>
-                <tr>
-                  <td>EPRT Online Edition</td>
-                  <td class="text-right"><strong>8.30 AM</strong></td>
-                </tr>
-                <tr>
-                  <td>ECCT Online Edition</td>
-                  <td class="text-right"><strong>10.30 AM</strong></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card air__utils__cardMarked air__utils__cardMarked--primary">
-      <div class="card-header card-header-flex">
-        <div class="d-flex flex-column justify-content-center">
-          <h5 class="mb-0">Time Progress</h5>
-        </div>
-        <div class="ml-auto d-flex flex-column justify-content-center">
-        <div>
-          <div class="dropdown d-inline-block">
-            
-            </div> 
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="table-responsive">
-          <table class="table table-borderless">
-            <thead>
-              <tr>
-                <th class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase">
-                  Students
-                </th>
-                <th
-                  class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase text-right"
-                  width="50%"
-                >
-                  Progress
-                </th>
-                <th class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase text-right">
-                  Time Left
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Participating in EPRT</td>
-                <td width="50%">
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-success"
-                      style="width: 60%"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </td>
-                <td class="font-weight-bold text-right">29 minutes remaining</td>
-              </tr>
-              <tr>
-                <td>Participating in ECCT </td>
-                <td width="50%">
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-success"
-                      style="width: 80%"
-                      role="progressbar"
-                      aria-valuenow="70"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </td>
-                <td class="font-weight-bold text-right">15 minutes remaining</td>
-              </tr>
-              <tr>
-                <td>Participating in TOEFL</td>
-                <td width="50%">
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-success"
-                      style="width: 20%"
-                      role="progressbar"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </td>
-                <td class="font-weight-bold text-right">2 hours remaining</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
+  <h5>Very Cool Form</h5>
 </div>
+<div class="card-body">
+    <h4 class="mb-4">
+      <div class="form-group"> 
+      <form action="store" method="post">
+      {{ csrf_field() }}
+        <label for="inputname">Name</label>
+        <input type="text" class="form-control" id="name" name="name"required="required"/>
+        <label for="inputname">NIM</label>
+        <input type="number" class="form-control" id="NIM" name="NIM"required="required"/>
+        <label for="inputname">E-mail</label>
+        <input type="email" class="form-control" id="email" name="email"required="required"/>
+        <label for="inputname">Course Options</label>
+        <input type="text" class="form-control" id="course" name="course"required="required"/>
+        <br>
+        <button type="submit" class="btn btn-primary mr-2 mb-2">
+        Submit &ensp;<i class="fa fa-arrow-circle-right fa-lg"></i> 
+        </button>
+      </form>  
+     </div>
+   </div>
+</div> 
+<!-- <div class="card">
+  <div class="card-body">
+    <h4 class="mb-4">
+      <strong>Form</strong>
+    </h4>
+    <form action="task/store" method="post">
+		{{ csrf_field() }}
+		Nama <input type="text" name="name" required="required"> <br/>
+		NIM <input type="number" name="NIM" required="required"> <br/>
+		email <input type="text" name="email" required="required"> <br/>
+		book <input type name="book" required="required"><br/>
+		<input type="submit" value="Upload">
+	</form> -->
+
+<!--     <div class="form-row">
+      <form action="/Task/store" method="post">
+      
+        <div class="form-group col-md-6">
+          <label for="inputfirstname">Name</label>
+          <input type="text" class="form-control" id="name" name="name"/>
         </div>
+        <div class="form-group col-md-6">
+          <label for="inputlastname">NIM</label>
+          <input type="number" class="form-control" id="NIM" name="NIM"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputemail">Email</label>
+        <input type="text" class="form-control" id="email"  name="name" placeholder="example@mail.com" />
+      </div>
+      <div class="form-group">
+      <label for="jasa">Service Type</label>
+           <select class="selectpicker">
+                <option>Regular - 50,000</option>
+                <option>Express - 75,000</option>
+           </select>
+      </div>
+      <div class="form-group">
+        <label for="bookT">Book Title</label>
+        <input type="book" class="form-control" id="book" name="book" placeholder="Harry Potter" />
+      </div>       
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label>Upload Document</label>
+          <input type="file" class="dropify" />
+        </div> 
+      </div>
+      <div class="form-group">
+        <label class="air__utils__control air__utils__control__checkbox">
+          <input type="checkbox" checked="checked" />
+          <span class="air__utils__control__indicator"></span>
+          I VERIFY THAT THE ABOVE FILE IS CORRECT.
+        </label>
+      </div>
+      <input type="submit" value="Simpan Data"> -->
+      </div>
+</div>
+
+<script>
+  ;(function($) {
+    'use strict'
+    $(function() {
+      $('.dropify').dropify()
+
+      $('#form-validation').validate({
+        submit: {
+          settings: {
+            inputContainer: '.form-group',
+            errorListClass: 'form-control-error',
+            errorClass: 'has-danger',
+          },
+        },
+      })
+
+      $('#form-validation .remove-error').on('click', function() {
+        $('#form-validation').removeError()
+      })
+
+      $('#slider-1').ionRangeSlider({
+        min: 0,
+        max: 100,
+        from: 50,
+        step: 10,
+        grid: true,
+        grid_num: 10,
+      })
+    })
+  })(jQuery)
+</script>
       </div>
       <div class="air__layout__footer">
         <div class="air__footer">

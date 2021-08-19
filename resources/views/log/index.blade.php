@@ -469,7 +469,7 @@
         </div>
       </div>
     </div>
-
+    
     <div class="air__layout">
       <div class="air__layout__header">
         <div class="air__utils__header">
@@ -480,7 +480,7 @@
               </li>
               <li class="air__subbar__breadcrumb">
                 <a href="#" class="air__subbar__breadcrumbLink air__subbar__breadcrumbLink--current"
-                  >Form Course</a
+                  >Table Logs</a
                 >
               </li>
             </ul>
@@ -526,12 +526,11 @@
       <div class="air__layout__content">
         <div class="air__utils__content">
           <div class="air__utils__heading"> 
-  <h5><h5><span><a href="/form2"><button type="button"class="btn btn-primary mr-2 mb-2">Create Course form</button></a></span> </h5></h5>
-</div>
+  <h5><span><a href="/log/create"><button type="button"class="btn btn-primary mr-2 mb-2">Log</button></a></span> </h5>
 <div class="card">
   <div class="card-body">
     <h4 class="mb-4">
-      <strong>Table Courses</strong>
+      <strong>Log Table</strong>
     </h4>
     <div class="table-responsive mb-5">
       <table class="table table-hover nowrap editable-table" id="example1">
@@ -540,23 +539,18 @@
             <th>Name</th>
             <th>NIM</th>
             <th>Email</th>
-            <th>Course</th>
-            <th>Update</th>
+            <th>Logs</th>
             <th>Delete</th>
           </tr>
         </thead>
         <tbody>
-        @foreach($tabelcourses as $tabelcourse)
+        @foreach($logs as $log)
           <tr>
-            <td>{{$tabelcourse['name']}}</td>
-            <td>{{$tabelcourse['NIM']}}</td>
-            <td>{{$tabelcourse['email']}}</td>
-            <td>{{$tabelcourse['course']}}</td>
-            <td><a href="/tablecourses/edit2/{{$tabelcourse->NIM}}" ><button type="button" class="btn btn-success">
-                <i class="fe fe-edit mr-1" aria-hidden="true"></i>
-                Edit
-              </button></a></td>
-            <td><a href="/tablecourses/delete2/{{$tabelcourse->NIM}}"><span class="btn btn-danger mr-1 mb-1">X</span</a></td>
+            <td>{{$log['name']}}</td>
+            <td>{{$log['NIM']}}</td>
+            <td>{{$log['email']}}</td>
+            <td>{{$log['logs']}}</td>
+            <td><a href="/log/index/destroy/{{$log->NIM}}"><span class="btn btn-danger mr-1 mb-1">X</span</a></td>
           </tr>
         @endforeach
         </tbody>
@@ -565,35 +559,33 @@
             <th>Name</th>
             <th>NIM</th>
             <th>Email</th>
-            <th>Course</th>
+            <th>Logs</th>
           </tr>
         </tfoot>
       </table>
+     </div>
     </div>
-
-
-      </div>
-      <div class="air__layout__footer">
-        <div class="air__footer">
-          <div class="air__footer__inner">
-            <div class="row">
-              <div class="col-md-8">
-                <p>
-                This website aims to provide information for students regarding their English academic information.
-                </p>
-                <p>
-                  &copy; 2021 Telkom University
-                </p>
+   <div class="air__layout__footer">
+     <div class="air__footer">
+       <div class="air__footer__inner">
+          <div class="row">
+            <div class="col-md-8">
+              <p>
+              This website aims to provide information for students regarding their English academic information.
+              </p>
+              <p>
+              &copy; 2021 Telkom University
+              </p>
               </div>
-              <div class="col-md-4">
-                <div class="air__footer__logo">
-                  <img src="../../components/core/img/logoTelu-small.png"/>
-                </div>
+             <div class="col-md-4">
+              <div class="air__footer__logo">
+               <img src="../../components/core/img/logoTelu-small.png"/>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
     </div>
   </div>
  </body>

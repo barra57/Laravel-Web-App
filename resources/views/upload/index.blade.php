@@ -542,7 +542,7 @@
 				</div>
 				@endif
 
-				<form action="/upload/proses" method="POST" enctype="multipart/form-data">
+				<form action="upload/index/proses" method="POST" enctype="multipart/form-data">
 					{{ csrf_field() }}
 
 					<div class="form-group">
@@ -574,8 +574,8 @@
 						<tr>
 							<td><a href="{{url('/download',$g->file)}}">{{$g->file}}</td>
               <td>{{$g->keterangan}}</td>
-              <td><a href="/tabelfileupload/edit5/{{$g->id}}" ><button type="button" class="btn btn-success"><i class="fe fe-edit mr-1" aria-hidden="true"></i>Edit</button></a></td>
-              <td><a href="/upload/delete5/{{$g->id}}"><span class="btn btn-danger mr-1 mb-1">X</span</a></td>
+              <td><a href="/upload/index/edit/{{$g->id}}" ><button type="button" class="btn btn-success"><i class="fe fe-edit mr-1" aria-hidden="true"></i>Edit</button></a></td>
+              <td><a href="/upload/index/destroy/{{$g->id}}"><span class="btn btn-danger mr-1 mb-1">X</span></a></td>
 						</tr>
 						@endforeach
 					</tbody>
