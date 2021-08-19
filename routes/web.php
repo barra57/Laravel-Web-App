@@ -12,6 +12,8 @@ use App\Http\Controllers\Course\CourseController;
 use App\Http\Controllers\Course\CreateCourseController;
 use App\Http\Controllers\Course\EditCourseController;
 use App\Http\Controllers\Course\DeleteCourseController;
+use App\Http\Controllers\Course\ResultCourseController;
+use App\Http\Controllers\Course\ShowCourseController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\CreateTaskController;
 use App\Http\Controllers\EditTaskController;
@@ -118,6 +120,8 @@ Route::group(['as' => 'client.', 'middleware' => ['auth']], function () {
     Route::get('course/index/edit/{NIM}',[EditCourseController::class,'edit']);
     Route::post('/update',[EditCourseController::class,'update']);
     Route::get('course/index/destroy/{NIM}',[DeleteCourseController::class,'destroy']);
+    Route::get('course/result',[ResultCourseController::class,'result']);
+    Route::get('course/show',[ShowCourseController::class,'show']);
 
     Route::get('chart/chartkursus',[chartkursus::class,'index']);
     Route::get('chart/chartterjemahan',[chartterjemahan::class,'index']);
