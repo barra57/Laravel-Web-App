@@ -19,7 +19,7 @@ class CreateDataujiansTable extends Migration
             $table->date('Tanggaldaftar');
             $table->string('Ujian',32);
             $table->date('Tanggalujian');
-            $table->integer('Sesi'11);
+            $table->integer('Sesi', 11);
             $table->timestamps();
         });
     }

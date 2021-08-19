@@ -172,7 +172,7 @@
               <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
                 <span>Course</span>
               </a>
-              <a href="/dataujian" class="air__menuLeft__link">
+              <a href="/languagetest/index" class="air__menuLeft__link">
               <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
                 <span>Language Test</span>
               </a>

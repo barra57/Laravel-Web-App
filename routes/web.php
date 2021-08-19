@@ -4,10 +4,10 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\LanguageTestController;
-use App\Http\Controllers\CreateLanguageTestController;
-use App\Http\Controllers\EditLanguageTestController;
-use App\Http\Controllers\DeleteLanguageTestController;
+use App\Http\Controllers\LanguageTest\LanguageTestController;
+use App\Http\Controllers\LanguageTest\CreateLanguageTestController;
+use App\Http\Controllers\LanguageTest\EditLanguageTestController;
+use App\Http\Controllers\LanguageTest\DeleteLanguageTestController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\CreateCourseController;
 use App\Http\Controllers\EditCourseController;
@@ -34,6 +34,7 @@ use App\Http\Controllers\TestsController;
 use App\Http\Controllers\ResultsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ChangePasswordController;
+use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\HomeController as HomeAdmin;
 use App\Http\Controllers\Admin\OptionsController;
@@ -72,12 +73,12 @@ Route::group(['as' => 'client.', 'middleware' => ['auth']], function () {
     Route::get('results/{result_id}', [ResultsController::class,'show'])->name('results.show');
     Route::get('send/{result_id}', [ResultsController::class,'send'])->name('results.send');
 
-    Route::get('dataujian',[LanguageTestController::class,'index2']);
-    Route::get('inputdataujian',[CreateLanguageTestController::class,'insert']);
-    Route::post('insertdb',[CreateLanguageTestController::class,'insertdb']);
-    Route::get('/dataujian/edit/{Nim}',[EditLanguageTestController::class,'edit']);
+    Route::get('languagetest/index',[LanguageTestController::class,'index']);
+    Route::get('languagetest/create',[CreateLanguageTestController::class,'create']);
+    Route::post('languagetest/store',[CreateLanguageTestController::class,'store']);
+    Route::get('languagetest/index/edit/{No}',[EditLanguageTestController::class,'edit']);
     Route::post('/update',[EditLanguageTestController::class,'update']);
-    Route::get('/dataujian/hapus/{Nim}',[DeleteLanguageTestController::class,'hapus']);
+    Route::get('languagetest/index/destroy/{No}',[DeleteLanguageTestController::class,'destroy']);
 
     Route::get('form4',[LogController::class,'form4']);
     Route::get('table4',[LogController::class,'table4']);
@@ -113,6 +114,8 @@ Route::group(['as' => 'client.', 'middleware' => ['auth']], function () {
     Route::get('/tablecourses/edit2/{NIM}',[EditCourseController::class,'edit2']);
     Route::post('/update2',[EditCourseController::class,'update2']);
     Route::get('/tablecourses/delete2/{NIM}',[DeleteCourseController::class,'delete2']);
+
+    Route::resource('photo', 'PhotoController');
 });
 
 Auth::routes();

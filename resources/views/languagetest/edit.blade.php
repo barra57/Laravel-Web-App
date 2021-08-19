@@ -469,36 +469,39 @@
         </div>
       </div>
     </div>
+    
       <div class="air__layout__content">
         <div class="air__utils__content">
           <div class="air__utils__heading">
   <h5>
-    <span class="mr-3">Input data</span>
+    <span class="mr-3">edit data</span>
   </h5>
 </div>
  <div class="card">
   <div class="card-body">
     <h4 class="mb-4">
-      <strong>Create New Language Test</strong>
+      <strong>Edit Language Test</strong>
     </h4>
-    <form action="insertdb" method="post">
-    {{ csrf_field() }}
-    <label for="inputname">No</label>
-    <input type="number" class="form-control" id="No" name="No"required="required"/>
-    <label for="inputname">Nama</label>
-    <input type="text" class="form-control" id="Nama" name="Nama"required="required"/>
-    <label for="inputname">Tanggal Daftar</label>
-    <input type="date" class="form-control" id="Tanggaldaftar" name="Tanggaldaftar"required="required"/>
-    <label for="inputname">Tipe Ujian</label>
-    <input type="text" class="form-control" id="Ujian" name="Ujian"required="required"/>
-    <label for="inputname">Tanggal Ujian</label>
-    <input type="date" class="form-control" id="Tanggalujian" name="Tanggalujian"required="required"/>
-    <label for="inputname">Sesi</label>
-    <input type="number" class="form-control" id="Sesi" name="Sesi"required="required"/>
-    
-    <br>
-    <button type="submit" value="Simpan Data" class="btn btn-primary mr-2 mb-2">Create &ensp;<i class="fa fa-arrow-circle-right fa-lg"></i></button>
+    @foreach($dataujian as $ujian)
+    <form action="/update" method="POST">
+      @csrf 
+      <input type="hidden" name="No" value="{{ $ujian->No }}"> <br/>
+      <label for="inputname">No</label>
+      <input type="number" class="form-control" id="No" name="No"required="required" value="{{ $ujian->No }}"/>
+      <label for="inputname">Nama</label>
+      <input type="text" class="form-control" id="Nama" name="Nama"required="required" value="{{ $ujian->Nama }}"/>
+      <label for="inputname">Tanggal Daftar</label>
+      <input type="date" class="form-control" id="Tanggaldaftar" name="Tanggaldaftar"required="required" value="{{ $ujian->Tanggaldaftar }}"/>
+      <label for="inputname">Tipe Ujian</label>
+      <input type="text" class="form-control" id="Ujian" name="Ujian"required="required" value="{{ $ujian->Ujian }}"/>
+      <label for="inputname">Tanggal Ujian</label>
+      <input type="date" class="form-control" id="Tanggalujian" name="Tanggalujian"required="required" value="{{ $ujian->Tanggalujian }}"/>
+      <label for="inputname">Sesi</label>
+      <input type="number" class="form-control" id="Sesi" name="Sesi"required="required" value="{{ $ujian->Sesi }}"/>
+      <br>
+      <button type="submit" value="Simpan Data" class="btn btn-primary mr-2 mb-2">Edit &ensp;<i class="fa fa-arrow-circle-right fa-lg"></i></button>
   </form>
+  @endforeach
   </div>
 </div>
 <div class="air__layout__footer">

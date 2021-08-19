@@ -475,7 +475,7 @@
       <div class="air__layout__content">
         <div class="air__utils__content">
           <div class="air__utils__heading">
-    <h5><h5><span><a href="/inputdataujian"><button type="button"class="btn btn-primary mr-2 mb-2">Create new Exam Data</button></a></span> </h5></h5>
+    <h5><h5><span><a href="/languagetest/create"><button type="button"class="btn btn-primary mr-2 mb-2">Create new Exam Data</button></a></span> </h5></h5>
     <span class="mr-3">Data Exam</span>
   </h5>
 </div>
@@ -507,8 +507,8 @@
             <td>{{$ujian['Ujian']}}</td>
             <td>{{$ujian['Tanggalujian']}}</td>
             <td>{{$ujian['Sesi']}}</td>
-            <td><a href="/dataujian/edit/{{ $ujian->No }}"><button type="button" class="btn btn-success"><i class="fe fe-edit mr-1" aria-hidden="true"></i>Edit</button></a></td>
-            <td><a href="/dataujian/hapus/{{ $ujian->No }}"><span class="btn btn-danger mr-1 mb-1">X</span></a></td>
+            <td><a href="/languagetest/index/edit/{{ $ujian->No }}"><button type="button" class="btn btn-success"><i class="fe fe-edit mr-1" aria-hidden="true"></i>Edit</button></a></td>
+            <td><a href="/languagetest/index/destroy/{{ $ujian->No }}"><span class="btn btn-danger mr-1 mb-1">X</span></a></td>
           </tr>
           @endforeach
         </tbody>
