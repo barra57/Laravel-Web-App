@@ -136,120 +136,141 @@
         <a href="javascript: void(0);" class="air__menuLeft__logo">
           <img src="../../components/core/img/logoTelu-small.png" />
         </a>
-        <a href="javascript: void(0);" class="air__menuLeft__user">
-          <div class="air__menuLeft__user__avatar">
-            <img src="../../components/core/img/avatars/avatar.png" alt="David Beckham" />
-          </div>
-          <div class="air__menuLeft__user__name">
-            Donald Gracie
-          </div>
-          <div class="air__menuLeft__user__role">
-            Student
-          </div>
-        </a>
+          <a href="javascript: void(0);" class="air__menuLeft__user">
+            <div class="air__menuLeft__user__avatar">
+              <img src="../../components/core/img/avatars/avatar.png" alt="David Beckham" />
+            </div>
+            <div class="air__menuLeft__user__name">
+              {{ Auth::user()->name }}
+            </div>
+            <div class="air__menuLeft__user__role">
+              as USER
+            </div>
+          </a>
         <div class="air__menuLeft__container air__customScroll">
           <ul class="air__menuLeft__list">
-            <li class="air__menuLeft__category">
-              <span>Information</span>
+            <li class=" air__menuLeft__item">
+                <a href="{{ route('client.home') }}" class="air__menuLeft__link">
+                  <i class="fe fe-menu air__menuLeft__icon"></i>
+                  <span>Dashboard</span>
+                </a>
             </li>
-            <li class="air__menuLeft__item">
-              <a href="javascript: void(0)" class="air__menuLeft__link air__sidebar__actionToggle">
-                <i class="fe fe-settings air__menuLeft__icon"></i>
-                <span>Settings</span>
+            <li class="air__menuLeft__item air__menuLeft__submenu">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>Charts</span>
               </a>
-            </li>
-            <li class="air__menuLeft__item">
-              <a href="https://docs.airuitemplate.com" target="_blank" class="air__menuLeft__link">
-                <i class="fe fe-compass air__menuLeft__icon"></i>
-                <span>Documentation</span>
-              </a>
-            </li>
-            <li class="air__menuLeft__category">
-              <span>Dashboards</span>
-            </li>
-        <!--    <li class="air__menuLeft__item air__menuLeft__submenu"> -->
-              <a href="/dashboard" class="air__menuLeft__link">
-              <i class="fe fe-home air__menuLeft__icon"></i> 
-                <span>Dashboards</span>
-
-              </a>
-              <li class="air__menuLeft__category">
-              <span>Table</span>
-            </li>
-              </a>
-              <a href="/table3" class="air__menuLeft__link">
-              <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
-                <span>Table Quiz</span>
-
-              </a>
-              <a href="/table2" class="air__menuLeft__link">
-              <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
-                <span>Table Course</span>
-
-              </a>
-              <a href="/table" class="air__menuLeft__link">
-              <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
-                <span>Table Translate</span>
-
-              </a>
-              <a href="/table4" class="air__menuLeft__link">
-              <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
-                <span>Table Log</span>
-
-              </a>
-              <a href="/upload" class="air__menuLeft__link">
-              <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
-                <span>Table Materi</span>
-
-              </a>
-              <li class="air__menuLeft__item air__menuLeft__submenu">
-                    <a href="javascript: void(0)" class="air__menuLeft__link">
-                        <i class="fe fe-menu air__menuLeft__icon"></i>
-                    <span>Layanan</span>
-                    </a>
-                    <ul class="air__menuLeft__list">
-                        <li class="air__menuLeft__item">
-                        <a href="/terjemah" class="air__menuLeft__link">
-                            <span>Terjemahan</span>
-                        </a>
-                        </li>
-                    </ul>
-                </li>
-    <!--      <ul class="air__menuLeft__list">
+              <ul class="air__menuLeft__list">
                 <li class="air__menuLeft__item">
-                  <a href="dashboards-analytics.html" class="air__menuLeft__link">
-                    <span>Analytics</span>
+                  <a href="/chart/charttes" class="air__menuLeft__link">
+                    <span>Charts Language Test</span>
                   </a>
                 </li>
-                <li class=" air__menuLeft__item">
-                  <a href="dashboards-statistics.html" class="air__menuLeft__link">
-                    <span>Statistics</span>
+                <li class="air__menuLeft__item">
+                  <a href="/chart/chartkursus" class="air__menuLeft__link">
+                    <span>Charts Language Course</span>
                   </a>
                 </li>
-                <li class=" air__menuLeft__item">
-                  <a href="dashboards-ecommerce.html" class="air__menuLeft__link">
-                    <span>Ecommerce</span>
-                  </a>
-                </li>
-                <li class=" air__menuLeft__item">
-                  <a href="dashboards-crypto.html" class="air__menuLeft__link">
-                    <span>Crypto</span>
-                  </a>
-                </li>
-                <li class=" air__menuLeft__item">
-                  <a href="dashboards-jira.html" class="air__menuLeft__link">
-                    <span>Example of a Dashboard</span>
-                  </a>
-                </li>
-                <li class=" air__menuLeft__item">
-                  <a href="dashboards-helpdesk.html" class="air__menuLeft__link">
-                    <span>Helpdesk</span> 
+                <li class="air__menuLeft__item">
+                  <a href="/chart/chartterjemahan" class="air__menuLeft__link">
+                    <span>Charts Translate</span>
                   </a>
                 </li>
               </ul>
-            </li> -->
-        </div> 
-      </div> 
+            </li>
+            <li class=" air__menuLeft__item">
+              <a href="/news" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>News</span>
+              </a>
+            </li>
+            <li class=" air__menuLeft__item">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>Announcement</span>
+              </a>
+            </li>
+            <li class=" air__menuLeft__item">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>Agenda</span>
+              </a>
+            </li>
+            <li class="air__menuLeft__item air__menuLeft__submenu">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>Service</span>
+              </a>
+              <ul class="air__menuLeft__list">
+                <li class="air__menuLeft__item">
+                  <a href="/languagetest/index" class="air__menuLeft__link">
+                    <span>Language Test</span>
+                  </a>
+                </li>
+                <li class="air__menuLeft__item">
+                  <a href="/course/index" class="air__menuLeft__link">
+                    <span>Language Course</span>
+                  </a>
+                </li>
+                <li class="air__menuLeft__item">
+                  <a href="/translate/index" class="air__menuLeft__link">
+                    <span>Translate</span>
+                  </a>
+                </li>
+              </ul>
+          </li>  
+          <li class=" air__menuLeft__item">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>About</span>
+              </a>
+            </li>
+            <li class=" air__menuLeft__item">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>FAQ</span>
+              </a>
+            </li>
+            <li class="air__menuLeft__item">
+                <a href="javascript: void(0)" class="air__menuLeft__link air__sidebar__actionToggle">
+                  <i class="fe fe-settings air__menuLeft__icon"></i>
+                    <span>Settings</span>
+                </a>
+              </li>
+            <li class="air__menuLeft__item air__menuLeft__submenu">
+                <a href="javascript: void(0)" class="air__menuLeft__link">
+                  <i class="fe fe-settings air__menuLeft__icon"></i>
+                <span>User Settings</span>
+                </a>
+                <ul class="air__menuLeft__list">
+                  <li class="air__menuLeft__item">
+                    <a href="/log/index" class="air__menuLeft__link">
+                      <span>Log</span>
+                    </a>
+                  </li>
+                  <li class="air__menuLeft__item">
+                    <a href="/upload/index" class="air__menuLeft__link">
+                      <span>Upload</span>
+                    </a>
+                  </li>
+                  <li class="air__menuLeft__item">
+                    <a href="{{ route('client.password.create') }}" class="air__menuLeft__link">
+                      <span>Change Password</span>
+                    </a>
+                  </li>
+                  <li class="air__menuLeft__item">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="air__menuLeft__link">
+                      <span>Logout</span>
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                    </form>
+                  </li>
+                </ul>
+              </li>
+          </ul>
+        </div>
+      </div>
     </div> 
     <div class="air__menuLeft__backdrop air__menuLeft__mobileActionToggle"></div>
     <div class="air__sidebar">
@@ -500,500 +521,46 @@
         </div>
       </div>
     </div>
-<!--    <button
-      class="air__sidebar__toggleButton air__sidebar__actionToggle btn btn-rounded btn-light text-nowrap text-dark font-weight-bold font-size-18"
-    >
-      <i class="fe fe-settings text-blue mr-md-2"></i>
-      <span class="d-none d-md-inline">Settings</span>
-    </button> -->
-    <div class="air__chat">
-      <button
-        class="air__chat__toggleButton air__chat__actionToggle btn btn-rounded btn-light text-nowrap text-dark font-weight-bold font-size-18"
-      >
-        <i class="fe fe-message-square text-blue mr-md -2"></i>
-        <span class="d-none d-md-inline">Support Chat</span>
-      </button>
-      <div class="air__chat__container">
-        <div class="d-flex flex-wrap mb-2">
-          <div class="text-dark font-size-18 font-weight-bold mr-auto">Support Chat</div>
-          <button class="air__g14__closeBtn btn btn-link air__chat__actionToggle">
-            <i class="fe fe-x-square font-size-21 align-middle text-gray-6"></i>
-          </button>
-        </div>
-        <div class="air__chat__innerContainer d-flex flex-column justify-content-end">
-          <div class="air__g14__contentWrapper air__customScroll">
-            <div class="air__g14__message">
-              <div class="air__g14__messageContent">
-                <div class="text-gray-4 font-size-12 text-uppercase">You, 5 min ago</div>
-                <div>
-                  Hi! I have a question how soon can i apply for a EPRT exam?
-                </div>
-              </div>
-              <div class="air__g14__messageAvatar air__utils__avatar">
-                <img src="../../components/core/img/avatars/avatar-2.png" alt="You" />
-              </div>
-            </div>
-            <div class="air__g14__message air__g14__message--answer">
-              <div class="air__g14__messageContent">
-                <div class="text-gray-4 font-size-12 text-uppercase">Ikhsan, 14 sec ago</div>
-                <div>
-                  It's open right now, all you have to do is apply. Click the link provided in the language test.
-                </div>
-              </div>
-              <div class="air__g14__messageAvatar air__utils__avatar">
-                <img src="../../components/core/img/avatars/avatar-2.png" alt="Admin ELC" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pt-2 pb-2">
-          Ikhsan is typing...
-        </div>
-        <div>
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Send message..."
-              aria-label="Recipient's username"
-              aria-describedby="button-addon2"
-            />
-            <div class="input-group-append">
-              <button class="btn btn-primary" type="button">
-                <i class="fe fe-send align-middle"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+    
     <div class="air__layout">
       <div class="air__layout__header">
         <div class="air__utils__header">
           <div class="air__topbar">
-            <div class="air__topbar__searchDropdown dropdown mr-md-4 mr-auto">
-              <div class="air__topbar__search dropdown-toggle" data-toggle="dropdown" data-offset="5,15">
-                <div class="air__topbar__searchContainer">
-                  <i class="air__topbar__searchIcon fe fe-search"></i>
-                  <input
-                    class="air__topbar__searchInput"
-                    type="text"
-                    placeholder="Start typing to search..."
-                  />
-                </div>
-              </div>
-              <div class="dropdown-menu" role="menu">
-                <div class="air__customScroll">
-                  <div class="air__l1 height-300">
-                    <div class="text-uppercase font-size-12 mb-2 text-gray-6">Documents (3)</div>
-                    <ul class="list-unstyled">
-                      <li class="air__l1__item">
-                        <a href="javascript: void(0);" class="air__l1__itemLink">
-                          <div class="air__l1__itemPic mr-3">
-                            <i class="air__l1__itemIcon fe fe-file"></i>
-                          </div>
-                          <div>
-                            <div class="text-blue">Something important.pdf</div>
-                            <div class="text-muted">568kb</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="air__l1__item">
-                        <a href="javascript: void(0);" class="air__l1__itemLink">
-                          <div class="air__l1__itemPic mr-3">
-                            <i class="air__l1__itemIcon fe fe-file"></i>
-                          </div>
-                          <div>
-                            <div class="text-blue">Queue Info.pdf</div>
-                            <div class="text-muted">1.2mb</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="air__l1__item">
-                        <a href="javascript: void(0);" class="air__l1__itemLink">
-                          <div class="air__l1__itemPic mr-3">
-                            <i class="air__l1__itemIcon fe fe-file"></i>
-                          </div>
-                          <div>
-                            <div class="text-blue">Something even more important.pdf</div>
-                            <div class="text-muted">67mb</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-            <!--        <div class="text-uppercase font-size-12 mb-2 text-gray-6">Agents (4)</div>
-                    <ul class="list-unstyled">
-                      <li class="air__l1__item">
-                        <a href="javascript: void(0);" class="air__l1__itemLink">
-                          <div class="air__utils__avatar mr-3">
-                            <img src="../../components/core/img/avatars/5.jpg" alt="Mary Stanform" />
-                          </div>
-                          <div>
-                            <div class="text-blue">Mary Stanform</div>
-                            <div class="text-muted">Sales Manager</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="air__l1__item">
-                        <a href="javascript: void(0);" class="air__l1__itemLink">
-                          <div class="air__utils__avatar mr-3">
-                            <img src="../../components/core/img/avatars/1.jpg" alt="Jamie Rockstar" />
-                          </div>
-                          <div>
-                            <div class="text-blue">Jamie Rockstar</div>
-                            <div class="text-muted">Blackoffice Agent</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="air__l1__item">
-                        <a href="javascript: void(0);" class="air__l1__itemLink">
-                          <div class="air__utils__avatar mr-3">
-                            <img src="../../components/core/img/avatars/2.jpg" alt="Axel Freddie" />
-                          </div>
-                          <div>
-                            <div class="text-blue">Axel Freddie</div>
-                            <div class="text-muted">Blackoffice Agent</div>
-                          </div>
-                        </a>
-                      </li> -->
-                    </ul>
-                  </div> 
-                </div>
-              </div>
-            </div> 
-            <div class="dropdown mr-auto d-none d-md-block">
-              <a
-                href=""
-                class="dropdown-toggle text-nowrap"
-                data-toggle="dropdown"
-                aria-expanded="false"
-                data-offset="0,15"
-              >
-                <i class="dropdown-toggle-icon fe fe-book-open"></i>
-                <span class="dropdown-toggle-text">Recent</span>
-              </a>
-              <div class="dropdown-menu" role="menu">
-        <!--        <div class="dropdown-header">Active</div> -->
-                <a class="dropdown-item" href="javascript:void(0)">EPRT Test</a>
-                <a class="dropdown-item" href="javascript:void(0)">ECCT Test</a>
-        <!--        <a class="dropdown-item" href="javascript:void(0)">Documentation</a>
-                <div class="dropdown-header">Inactive</div>
-                <a class="dropdown-item" href="javascript:void(0)">Marketing</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="javascript:void(0)">
-                  <i class="dropdown-icon fe fe-settings"></i>
-                  Settings
-                </a> -->
-              </div>
-            </div>
-            <p class="mb-0 mr-4 d-xl-block d-none">
-              Status
-              <span class="ml-1 badge bg-success text-white font-size-12 text-uppercase air__topbar__status"
-                >Online</span
-              >
-            </p>
-            <div class="dropdown mr-4 d-none d-sm-block">
-              <a href="" class="dropdown-toggle text-nowrap" data-toggle="dropdown" data-offset="5,15">
-                <span class="dropdown-toggle-text">EN</span>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" role="menu">
-                <a class="dropdown-item" href="javascript:void(0)"
-                  ><span class="text-uppercase font-size-12 mr-1 align-text-bottom">EN</span> English</a
-                >
-                <a class="dropdown-item" href="javascript:void(0)"
-                  ><span class="text-uppercase font-size-12 mr-1 align-text-bottom">ID</span> Bahasa</a
-                >
-              </div>
-            </div>
-            <div class="air__topbar__actionsDropdown dropdown mr-4 d-none d-sm-block">
-              <a
-                href=""
-                class="dropdown-toggle text-nowrap"
-                data-toggle="dropdown"
-                aria-expanded="false"
-                data-offset="0,15"
-              >
-                <i class="dropdown-toggle-icon fe fe-menu"></i>
-                <span class="dropdown-toggle-text">Actions</span>
-              </a>
-              <div class="air__topbar__actionsDropdownMenu dropdown-menu dropdown-menu-right" role="menu">
-                <div class="card-header card-header-flex">
-                  <ul
-                    class="nav nav-tabs nav-tabs-line nav-tabs-line-bold nav-tabs-noborder nav-tabs-stretched flex-nowrap"
-                  >
-                    <li class="nav-item" role="tablist">
-                      <a
-                        href="#tab-alert-content"
-                        class="nav-link active"
-                        id="tab-alert"
-                        data-toggle="tab"
-                        aria-selected="true"
-                      >
-                        Alerts
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        href="#tab-events-content"
-                        class="nav-link"
-                        id="tab-events"
-                        data-toggle="tab"
-                        aria-selected="false"
-                      >
-                        Events
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        href="#tab-actions-content"
-                        class="nav-link"
-                        id="tab-actions"
-                        data-toggle="tab"
-                        aria-selected="false"
-                      >
-                        Actions
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-body">
-                  <div class="height-300 air__customScroll">
-                    <div class="tab-content">
-                      <div
-                        class="tab-pane fade show active"
-                        id="tab-alert-content"
-                        role="tabpanel"
-                        aria-labelledby="tab-alert-content"
-                      >
-                        <ul class="width-250 list-unstyled">
-                          <li class="mb-3">
-                            <div class="air__l2__head">
-                              <p class="air__l2__title">
-                                Test Result:
-                                <strong class="text-black">Passed</strong>
-                              </p>
-                              <time class="air__l2__time">5 min ago</time>
-                            </div>
-                            <p class="air__l2__content">
-                              Check your email for your certificate.
-                            </p>
-                          </li>
-                       <!--   <li class="mb-3">
-                            <div class="air__l2__head">
-                              <p class="air__l2__title">
-                                Update Status:
-                                <strong class="text-danger">Rejected</strong>
-                              </p>
-                              <time class="air__l2__time">15 min ago</time>
-                            </div>
-                            <p class="air__l2__content">
-                              Mary has declined your quote.
-                            </p>
-                          </li>
-                          <li class="mb-3">
-                            <div class="air__l2__head">
-                              <p class="air__l2__title">
-                                Payment Received:
-                                <strong class="text-black">$5,467.00</strong>
-                              </p>
-                              <time class="air__l2__time">15 min ago</time>
-                            </div>
-                            <p class="air__l2__content">
-                              GOOGLE, LLC AUTOMATED PAYMENTS
-                            </p>
-                          </li>
-                          <li class="mb-3">
-                            <div class="air__l2__head">
-                              <p class="air__l2__title">
-                                Notification:
-                                <strong class="text-danger">Access Denied</strong>
-                              </p>
-                              <time class="air__l2__time">5 Hours ago</time>
-                            </div>
-                            <p class="air__l2__content">
-                              The system prevent login to your account
-                            </p>
-                          </li>
-                          <li class="mb-3">
-                            <div class="air__l2__head">
-                              <p class="air__l2__title">
-                                Payment Received:
-                                <strong class="text-black">$55,829.00</strong>
-                              </p>
-                              <time class="air__l2__time">1 day ago</time>
-                            </div>
-                            <p class="air__l2__content">
-                              GOOGLE, LLC AUTOMATED PAYMENTS
-                            </p>
-                          </li>
-                          <li class="mb-3">
-                            <div class="air__l2__head">
-                              <p class="air__l2__title">
-                                Notification:
-                                <strong class="text-danger">Access Denied</strong>
-                              </p>
-                              <time class="air__l2__time">5 Hours ago</time>
-                            </div>
-                            <p class="air__l2__content">
-                              The system prevent login to your account
-                            </p>
-                          </li> -->
-                        </ul>
-                      </div>
-                      <div
-                        class="tab-pane fade"
-                        id="tab-events-content"
-                        role="tabpanel"
-                        aria-labelledby="tab-alert-content"
-                      >
-                        <div class="width-250">
-                          No Events
-                        </div>
-                      </div>
-                      <div
-                        class="tab-pane fade"
-                        id="tab-actions-content"
-                        role="tabpanel"
-                        aria-labelledby="tab-alert-content"
-                      >
-                        <div class="width-250">
-                          No Actions
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="dropdown">
-              <a
-                href=""
-                class="dropdown-toggle text-nowrap"
-                data-toggle="dropdown"
-                aria-expanded="false"
-                data-offset="5,15"
-              >
-                <img
-                  class="dropdown-toggle-avatar"
-                  src="../../components/core/img/avatars/avatar-2.png"
-                  alt="User avatar"
-                />
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" role="menu">
-                <a class="dropdown-item" href="javascript:void(0)">
-                  <i class="dropdown-icon fe fe-user"></i>
-                  Profile
-                </a>
-                <div class="dropdown-divider"></div>
-                <div class="dropdown-header">
-                  Home
-                </div>
-                <a class="dropdown-item" href="javascript:void(0)">
-                  <i class="dropdown-icon fe fe-chevron-right"></i>
-                  System Dashboard
-                </a>
-                <a class="dropdown-item" href="javascript:void(0)">
-                  <i class="dropdown-icon fe fe-chevron-right"></i>
-                  User Boards
-                </a>
-                <a class="dropdown-item" href="javascript:void(0)">
-                  <i class="dropdown-icon fe fe-chevron-right"></i>
-                  Issue Navigator
-                  <span class="badge badge-success font-size-11 ml-2">25 New</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="javascript:void(0)">
-                  <i class="dropdown-icon fe fe-log-out"></i> Logout
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="air__subbar">
-            <ul class="air__subbar__breadcrumbs mr-4">
-              <li class="air__subbar__breadcrumb">
-                <a href="#" class="air__subbar__breadcrumbLink">Main</a>
-              </li>
-              <li class="air__subbar__breadcrumb">
-                <a href="#" class="air__subbar__breadcrumbLink air__subbar__breadcrumbLink--current"
-                  >Form Edit</a
-                >
-              </li>
-            </ul>
-    <!--        <div class="air__subbar__divider mr-4 d-none d-xl-block"></div>
-            <p class="color-gray-4 text-uppercase font-size-18 mb-0 mr-4 d-none d-xl-block">INV-00125</p>
-            <button class="btn btn-primary btn-with-addon mr-auto text-nowrap d-none d-md-block">
-              <span class="btn-addon">
-                <i class="btn-addon-icon fe fe-plus-circle"></i>
-              </span>
-              New Request
-            </button>
-            <div class="air__subbar__amount mr-3 ml-auto d-none d-sm-flex">
-              <p class="air__subbar__amountText">
-                This month
-                <span class="air__subbar__amountValue">$251.12</span>
-              </p>
-              <div class="air__subbar__amountGraph">
-                <i class="air__subbar__amountGraphItem" style="height: 80%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 50%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 70%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 60%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 50%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 65%"></i>
-              </div>
-            </div>
-            <div class="air__subbar__amount d-none d-sm-flex">
-              <p class="air__subbar__amountText">
-                Last month
-                <span class="air__subbar__amountValue">$12,256.12</span>
-              </p>
-              <div class="air__subbar__amountGraph">
-                <i class="air__subbar__amountGraphItem" style="height: 60%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 65%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 75%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 55%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 100%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 85%"></i>
-              </div>
-            </div> -->
-          </div>
-        </div>
-      </div> 
-      <div class="air__layout__content">
-        <div class="air__utils__content">
-          <div class="air__utils__heading"> 
-  <h5>Very Cool Edit Form</h5>
-</div>
 
-<!-- <div class="card">
-  <div class="card-body">
-    <h4 class="mb-4">
-      <strong>Form</strong>
-    </h4>
-    <form action="task/store" method="post">
-		{{ csrf_field() }}
-		Nama <input type="text" name="name" required="required"> <br/>
-		NIM <input type="number" name="NIM" required="required"> <br/>
-		email <input type="text" name="email" required="required"> <br/>
-		book <input type name="book" required="required"><br/>
-		<input type="submit" value="Upload">
-	</form> -->
+            <h5>Very Cool Edit Form</h5>
+          </div>
 
-  <div class="card-body">
-    <h4 class="mb-4">
-      <div class="form-group"> 
-    	@foreach($tabelfileupload as $g)
-		<form action="/update" method="POST">
-		{{ csrf_field() }}
-			<input type="hidden" name="id" value="{{ $g->id }}"> <br/>
-			  <label for="editname">File PDF</label>
-        <input type="file" class="form-control" required="required" name="file" value="{{ $g->file }}"> <br/>
-        <label for="editnim">Keterangan</label>
-				<textarea class="form-control" required="required" name="keterangan" value="{{ $g->keterangan }}"></textarea><br/>
-			<button type="submit" class="btn btn-primary mr-2 mb-2">Update &ensp;<i class="fa fa-arrow-circle-right fa-lg"></i> 
-		</form>
-		@endforeach  
-	</div>
-</div>
+          <!-- <div class="card">
+            <div class="card-body">
+              <h4 class="mb-4">
+                <strong>Form</strong>
+              </h4>
+              <form action="task/store" method="post">
+          		{{ csrf_field() }}
+          		Nama <input type="text" name="name" required="required"> <br/>
+          		NIM <input type="number" name="NIM" required="required"> <br/>
+          		email <input type="text" name="email" required="required"> <br/>
+          		book <input type name="book" required="required"><br/>
+          		<input type="submit" value="Upload">
+          	</form> -->
+
+            <div class="card-body">
+              <h4 class="mb-4">
+                <div class="form-group"> 
+              	@foreach($tabelfileupload as $g)
+          		<form action="/update" method="POST">
+          		{{ csrf_field() }}
+          			<input type="hidden" name="id" value="{{ $g->id }}"> <br/>
+          			  <label for="editname">File PDF</label>
+                  <input type="file" class="form-control" required="required" name="file" value="{{ $g->file }}"> <br/>
+                  <label for="editnim">Keterangan</label>
+          				<textarea class="form-control" required="required" name="keterangan" value="{{ $g->keterangan }}"></textarea><br/>
+          			<button type="submit" class="btn btn-primary mr-2 mb-2">Update &ensp;<i class="fa fa-arrow-circle-right fa-lg"></i> 
+          		</form>
+          		@endforeach  
+          	</div>
+          </div>
 
  <!--     <div class="form-row">
       <form action="/Task/store" method="post">

@@ -9,7 +9,7 @@ use App\Models\tabelcourses;
 
 class ResultCourseController extends Controller
 {
-    public function show()
+    public function result()
     {
         return view('/course/result');
     }

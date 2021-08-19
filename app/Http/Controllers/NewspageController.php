@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\chart;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class charttes extends Controller
+class NewspageController extends Controller
 {
+    //
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +14,7 @@ class charttes extends Controller
      */
     public function index()
     {
-        return view('chart/charttes');
+        return view('news');
     }
 
     /**

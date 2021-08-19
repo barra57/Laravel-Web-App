@@ -149,55 +149,107 @@
           </a>
         <div class="air__menuLeft__container air__customScroll">
           <ul class="air__menuLeft__list">
-            <li class="air__menuLeft__category">
-              <span>Dashboards</span>
+            <li class=" air__menuLeft__item">
+                <a href="{{ route('client.home') }}" class="air__menuLeft__link">
+                  <i class="fe fe-menu air__menuLeft__icon"></i>
+                  <span>Dashboard</span>
+                </a>
             </li>
-              <a href="{{ route('client.home') }}" class="air__menuLeft__link">
-              <i class="fe fe-home air__menuLeft__icon"></i> 
-                <span>Dashboards</span>
+            <li class="air__menuLeft__item air__menuLeft__submenu">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>Charts</span>
               </a>
-              <a href="{{ route('client.test') }}" class="air__menuLeft__link">
-              <i class="fe fe-home air__menuLeft__icon"></i> 
-                <span>Start Test</span>
-              </a>
-              <li class="air__menuLeft__category">
-              <span>Table</span>
+              <ul class="air__menuLeft__list">
+                <li class="air__menuLeft__item">
+                  <a href="/chart/charttes" class="air__menuLeft__link">
+                    <span>Charts Language Test</span>
+                  </a>
+                </li>
+                <li class="air__menuLeft__item">
+                  <a href="/chart/chartkursus" class="air__menuLeft__link">
+                    <span>Charts Language Course</span>
+                  </a>
+                </li>
+                <li class="air__menuLeft__item">
+                  <a href="/chart/chartterjemahan" class="air__menuLeft__link">
+                    <span>Charts Translate</span>
+                  </a>
+                </li>
+              </ul>
             </li>
-              <a href="/terjemah" class="air__menuLeft__link">
-              <i class="fe fe-bookmark air__menuLeft__icon"></i> 
-                <span>Translate</span>
+            <li class=" air__menuLeft__item">
+              <a href="/news" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>News</span>
               </a>
+            </li>
+            <li class=" air__menuLeft__item">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>Announcement</span>
               </a>
-              <a href="/table2" class="air__menuLeft__link">
-              <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
-                <span>Course</span>
+            </li>
+            <li class=" air__menuLeft__item">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>Agenda</span>
               </a>
-              <a href="/dataujian" class="air__menuLeft__link">
-              <i class="fe fe-hard-drive air__menuLeft__icon"></i> 
-                <span>Language Test</span>
+            </li>
+            <li class="air__menuLeft__item air__menuLeft__submenu">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>Service</span>
               </a>
-              <li class="air__menuLeft__category">
-                <span>Other</span>
-              </li>
-              <li class="air__menuLeft__item">
+              <ul class="air__menuLeft__list">
+                <li class="air__menuLeft__item">
+                  <a href="/languagetest/index" class="air__menuLeft__link">
+                    <span>Language Test</span>
+                  </a>
+                </li>
+                <li class="air__menuLeft__item">
+                  <a href="/course/index" class="air__menuLeft__link">
+                    <span>Language Course</span>
+                  </a>
+                </li>
+                <li class="air__menuLeft__item">
+                  <a href="/translate/index" class="air__menuLeft__link">
+                    <span>Translate</span>
+                  </a>
+                </li>
+              </ul>
+          </li>  
+          <li class=" air__menuLeft__item">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>About</span>
+              </a>
+            </li>
+            <li class=" air__menuLeft__item">
+              <a href="javascript: void(0)" class="air__menuLeft__link">
+                <i class="fe fe-menu air__menuLeft__icon"></i>
+                <span>FAQ</span>
+              </a>
+            </li>
+            <li class="air__menuLeft__item">
                 <a href="javascript: void(0)" class="air__menuLeft__link air__sidebar__actionToggle">
                   <i class="fe fe-settings air__menuLeft__icon"></i>
                     <span>Settings</span>
                 </a>
               </li>
-              <li class="air__menuLeft__item air__menuLeft__submenu">
+            <li class="air__menuLeft__item air__menuLeft__submenu">
                 <a href="javascript: void(0)" class="air__menuLeft__link">
                   <i class="fe fe-settings air__menuLeft__icon"></i>
                 <span>User Settings</span>
                 </a>
                 <ul class="air__menuLeft__list">
                   <li class="air__menuLeft__item">
-                    <a href="/table4" class="air__menuLeft__link">
+                    <a href="/log/index" class="air__menuLeft__link">
                       <span>Log</span>
                     </a>
                   </li>
                   <li class="air__menuLeft__item">
-                    <a href="/upload" class="air__menuLeft__link">
+                    <a href="/upload/index" class="air__menuLeft__link">
                       <span>Upload</span>
                     </a>
                   </li>

@@ -38,7 +38,7 @@ use App\Http\Controllers\TestsController;
 use App\Http\Controllers\ResultsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ChangePasswordController;
-use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\NewspageController;
 use App\Http\Controllers\chart\chartkursus;
 use App\Http\Controllers\chart\chartterjemahan;
 use App\Http\Controllers\chart\charttes;
@@ -131,8 +131,8 @@ Route::group(['as' => 'client.', 'middleware' => ['auth']], function () {
     Route::get('chart/chartterjemahan',[chartterjemahan::class,'index']);
     Route::get('chart/charttes',[charttes::class,'index']);
 
+    Route::get('news',[NewspageController::class,'index']);
 
-    Route::resource('photo', 'PhotoController');
 });
 
 Auth::routes();
