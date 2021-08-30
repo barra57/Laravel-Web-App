@@ -736,12 +736,6 @@
           </div>
         </div>
       </div> 
-      <div class="air__layout__content">
-        <div class="air__utils__content">
-          <div class="air__utils__heading"> 
-              <h5>Very Cool Dashboard</h5>
-          </div>
-
                     @if(session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}

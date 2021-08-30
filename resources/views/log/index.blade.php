@@ -520,69 +520,16 @@
           </div>
         </div>
       </div>
-    </div>
-    
-    <div class="air__layout">
-      <div class="air__layout__header">
-        <div class="air__utils__header">
-          <div class="air__subbar">
-            <ul class="air__subbar__breadcrumbs mr-4">
-              <li class="air__subbar__breadcrumb">
-                <a href="#" class="air__subbar__breadcrumbLink">Main</a>
-              </li>
-              <li class="air__subbar__breadcrumb">
-                <a href="#" class="air__subbar__breadcrumbLink air__subbar__breadcrumbLink--current"
-                  >Table Logs</a
-                >
-              </li>
-            </ul>
-    <!--        <div class="air__subbar__divider mr-4 d-none d-xl-block"></div>
-            <p class="color-gray-4 text-uppercase font-size-18 mb-0 mr-4 d-none d-xl-block">INV-00125</p>
-            <button class="btn btn-primary btn-with-addon mr-auto text-nowrap d-none d-md-block">
-              <span class="btn-addon">
-                <i class="btn-addon-icon fe fe-plus-circle"></i>
-              </span>
-              New Request
-            </button>
-            <div class="air__subbar__amount mr-3 ml-auto d-none d-sm-flex">
-              <p class="air__subbar__amountText">
-                This month
-                <span class="air__subbar__amountValue">$251.12</span>
-              </p>
-              <div class="air__subbar__amountGraph">
-                <i class="air__subbar__amountGraphItem" style="height: 80%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 50%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 70%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 60%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 50%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 65%"></i>
-              </div>
-            </div>
-            <div class="air__subbar__amount d-none d-sm-flex">
-              <p class="air__subbar__amountText">
-                Last month
-                <span class="air__subbar__amountValue">$12,256.12</span>
-              </p>
-              <div class="air__subbar__amountGraph">
-                <i class="air__subbar__amountGraphItem" style="height: 60%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 65%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 75%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 55%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 100%"></i>
-                <i class="air__subbar__amountGraphItem" style="height: 85%"></i>
-              </div>
-            </div> -->
-          </div>
-        </div>
-      </div> 
-      <div class="air__layout__content">
+    </div> 
+    <div class="air__layout__content">
         <div class="air__utils__content">
-          <div class="air__utils__heading"> 
-  <h5><span><a href="/log/create"><button type="button"class="btn btn-primary mr-2 mb-2">Log</button></a></span> </h5>
+          <div class="air__utils__heading">
+          <h5><span class="mr-3"><strong>Table Log</strong></span></h5> 
+</div>
 <div class="card">
   <div class="card-body">
     <h4 class="mb-4">
-      <strong>Log Table</strong>
+      <h5><span><a href="/log/create"><button type="button"class="btn btn-primary mr-2 mb-2">Log</button></a></span> </h5>
     </h4>
     <div class="table-responsive mb-5">
       <table class="table table-hover nowrap editable-table" id="example1">

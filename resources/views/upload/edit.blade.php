@@ -518,30 +518,12 @@
         </div>
       </div>
     </div>
-
-    
-    <div class="air__layout">
-      <div class="air__layout__header">
-        <div class="air__utils__header">
-          <div class="air__topbar">
-
-            <h5>Edit Description & PDF</h5>
+    <div class="air__layout__content">
+        <div class="air__utils__content">
+          <div class="air__utils__heading">
+          <h5><span class="mr-3"><strong>Edit Description & PDF</strong></span></h5> 
+</div>
           </div>
-
-          <!-- <div class="card">
-            <div class="card-body">
-              <h4 class="mb-4">
-                <strong>Form</strong>
-              </h4>
-              <form action="task/store" method="post">
-          		{{ csrf_field() }}
-          		Nama <input type="text" name="name" required="required"> <br/>
-          		NIM <input type="number" name="NIM" required="required"> <br/>
-          		email <input type="text" name="email" required="required"> <br/>
-          		book <input type name="book" required="required"><br/>
-          		<input type="submit" value="Upload">
-          	</form> -->
-
             <div class="card-body">
               <h4 class="mb-4">
                 <div class="form-group"> 

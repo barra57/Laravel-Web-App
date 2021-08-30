@@ -650,7 +650,7 @@
         <div class="air__utils__content">
           <div class="air__utils__heading">
   <h5>
-    <span class="mr-3">Tes Bahasa</span>
+    <span class="mr-3"><strong>Language Test Chart</strong></span>
   </h5>
 </div>
 <div class="card">

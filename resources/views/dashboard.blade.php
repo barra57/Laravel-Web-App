@@ -958,11 +958,6 @@
           </div>
         </div>
       </div> 
-      <div class="air__layout__content">
-        <div class="air__utils__content">
-          <div class="air__utils__heading"> 
-  <h5>Very Cool Dashboard</h5>
-</div>
 <div class="row">
   <div class="col-lg-6">
     <div class="card air__utils__cardMarked air__utils__cardMarked--primary">
