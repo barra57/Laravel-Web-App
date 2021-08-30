@@ -531,7 +531,7 @@
         <div class="air__utils__content">
           <div class="air__utils__heading">
             <h5>
-              <span class="mr-3">Hasil Translate</span>
+              <span class="mr-3">Translate Result</span>
             </h5>
 </div>
 <div class="row">
@@ -541,8 +541,8 @@
         <thead>
           <tr>
             <th>No.</th>
-            <th>Nama Lengkap</th>
-            <th>Penerjemah</th>
+            <th>Full Name</th>
+            <th>Translator</th>
           </tr>
         </thead>
         @foreach($tabelterjemahs as $x)

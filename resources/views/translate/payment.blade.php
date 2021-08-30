@@ -530,7 +530,7 @@
       <div class="air__layout__content">
         <div class="air__utils__content">
           <div class="air__utils__heading">
-          <h5>Invoice</h5>
+          <h5>Payment</h5>
 </div>
 <div class="card">
   <div class="card-body">
@@ -577,11 +577,11 @@
         <table class="table table-borderless table-vertical-middle">
             <tr>
                 <th style="width: 45px;"></th>
-                <th class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase">Tanggal Daftar</th>
-                <th class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase">Nama Lengkap</th>
-                <th class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase">Tipe Kursus</th>
-                <th class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase text-right">Batch Kursus</th>
-                <th class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase text-right">Biaya Kursus</th>
+                <th class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase">Register Date</th>
+                <th class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase">Full Name</th>
+                <th class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase">Course Type</th>
+                <th class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase text-right">Course Batch</th>
+                <th class="border-bottom-0 font-weight-normal text-gray-6 text-uppercase text-right">Course Fee</th>
             </tr>
             <tr>
                 <td style="width: 45px;">
@@ -612,13 +612,13 @@
     </div>
     <div class="text-right font-size-18 text-dark">
         <div>Sub Total: <span class="font-weight-bold">Rp500.000</span></div>
-        <div>Pajak: <span class="font-weight-bold">Rp50.000</span></div>
+        <div>Tax: <span class="font-weight-bold">Rp50.000</span></div>
         <div>Total: <span class="font-weight-bold">Rp550.000</span></div>
         <div>
             <label>Upload Presentation</label>
             <input type="file" class="dropify" />
         </div>
-        <a href="/translate/confirmpayment" class="btn btn-outline-success mt-3">Bayar</a>
+        <a href="/translate/confirmpayment" class="btn btn-outline-success mt-3">Pay</a>
     </div>
   </div>
 </div>

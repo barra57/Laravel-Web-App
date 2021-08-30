@@ -137,9 +137,6 @@
           <img src="../../components/core/img/logoTelu-small.png" />
         </a>
           <a href="javascript: void(0);" class="air__menuLeft__user">
-            <div class="air__menuLeft__user__avatar">
-              <img src="../../components/core/img/avatars/avatar.png" alt="David Beckham" />
-            </div>
             <div class="air__menuLeft__user__name">
               {{ Auth::user()->name }}
             </div>
@@ -528,7 +525,7 @@
         <div class="air__utils__header">
           <div class="air__topbar">
 
-            <h5>Very Cool Edit Form</h5>
+            <h5>Edit Description & PDF</h5>
           </div>
 
           <!-- <div class="card">
@@ -554,7 +551,7 @@
           			<input type="hidden" name="id" value="{{ $g->id }}"> <br/>
           			  <label for="editname">File PDF</label>
                   <input type="file" class="form-control" required="required" name="file" value="{{ $g->file }}"> <br/>
-                  <label for="editnim">Keterangan</label>
+                  <label for="editnim">Description</label>
           				<textarea class="form-control" required="required" name="keterangan" value="{{ $g->keterangan }}"></textarea><br/>
           			<button type="submit" class="btn btn-primary mr-2 mb-2">Update &ensp;<i class="fa fa-arrow-circle-right fa-lg"></i> 
           		</form>

@@ -531,10 +531,10 @@
         <div class="air__utils__content">
           <div class="air__utils__heading">
           <h5>
-            <span class="mr-3">Update Translate</span>
+            <span class="mr-3">Edit Translate</span>
           </h5>
 </div>
-</div>
+
 <div class="card-body">
     <h4 class="mb-4">
     </h4>
@@ -543,7 +543,9 @@
 		  <form action="/update" method="POST">
 		  {{ csrf_field() }}
         <input type="hidden" name="id" value="{{ $k->id }}">
-        <label for="TextTerjemahan">Translate Text</label>
+        <div>{{$k->TextTerjemahan}}</div>
+  </div>
+        <h5 for="TextTerjemahan">New Translation Text</h5>
         <textarea input type="text" class="form-control" required="required" name="TextTerjemahan" value="{{ $k->TextTerjemahan }}"></textarea> <br/>
 			  <button type="submit" class="btn btn-primary">Submit &ensp;<i class="fa fa-arrow-circle-right fa-lg"></i> 
 		  </form>

@@ -93,15 +93,15 @@ Route::group(['as' => 'client.', 'middleware' => ['auth']], function () {
     Route::post('log/store',[CreateLogController::class,'store']);
 
     Route::get('upload/index',[UploadController::class,'index']);
-    Route::post('upload/index/proses',[ProccesUploadController::class,'proses_upload']);
+    Route::post('upload/proses',[ProccesUploadController::class,'proses_upload']);
     Route::get('upload/index/edit/{id}',[EditUploadController::class,'edit']);
-    Route::post('/update',[EditUploadController::class,'update']);
+    Route::post('upload/update',[EditUploadController::class,'update']);
     Route::get('upload/index/destroy/{id}',[DeleteUploadController::class,'destroy']);    
     Route::get('upload/index/download/{file}',[DownloadUploadController::class,'download']);
 
     Route::get('translate/index', [TerjemahController::class,'index']);
     Route::get('translate/create',[CreateTerjemahController::class,'create']);
-    Route::post('store',[CreateTerjemahController::class,'store']);
+    Route::post('translate/store',[CreateTerjemahController::class,'store']);
     Route::get('translate/destroy/{id}',[DeleteTerjemahController::class,'destroy']);
     Route::get('translate/payment/{id}',[PembayaranTerjemahController::class,'payment']);
     Route::get('translate/show/{id}',[TerjemahController::class,'show']);

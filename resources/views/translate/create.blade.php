@@ -525,45 +525,32 @@
     <div class="air__layout">
       <div class="air__layout__header">
         <div class="air__utils__header">
-          <div class="air__subbar">
-            <ul class="air__subbar__breadcrumbs mr-4">
-              <li class="air__subbar__breadcrumb">
-                <a href="#" class="air__subbar__breadcrumbLink">Main</a>
-              </li>
-              <li class="air__subbar__breadcrumb">
-                <a href="#" class="air__subbar__breadcrumbLink air__subbar__breadcrumbLink--current"
-                  >Form Course</a
-                >
-              </li>
-            </ul>
-
-          </div>
         </div>
       </div> 
       <div class="air__layout__content">
         <div class="air__utils__content">
-          <div class="air__utils__heading"> 
-          <h5><span class="mr-3">Daftar Terjemahan</span></h5>
+          <div class="air__utils__heading">
+          <h5><span class="mr-3">Register</span></h5> 
 </div>
 <div class="card-body">
     <h4 class="mb-4">
-        <strong>Daftar Terjemahan</strong>
+        <strong>Translate Register</strong>
     </h4>
       <div class="form-group"> 
       <form action="store" method="post">
       {{ csrf_field() }}
-        <label for="inputname">Tanggal Terjemah</label>
+        <label for="inputname">Translate Date</label>
         <input type="date" class="form-control" id="TanggalTerjemah" name="TanggalTerjemah"required="required"/>
-        <label for="inputname">Nama Lengkap</label>
+        <label for="inputname">Full Name</label>
         <input type="text" class="form-control" id="NamaLengkap" name="NamaLengkap"required="required"/>
-        <label for="inputname">Tanggal Daftar</label>
+        <label for="inputname">Register Date</label>
         <input type="date" class="form-control" id="TanggalDaftar" name="TanggalDaftar"required="required"/>
-        <label for="inputname">Penerjemah</label>
+        <label for="inputname">Translator</label>
         <input type="text" class="form-control" id="Penerjemah" name="Penerjemah"required="required"/>
-        <label for="inputname">Text Terjemahan</label>
+        <label for="inputname">Translation Text</label>
         <input type="longtext" class="form-control" id="TextTerjemahan" name="TextTerjemahan"required="required"/>
         <br>
-        <button type="submit" class="btn btn-primary mr-2 mb-2">Daftar &ensp;<i class="fa fa-arrow-circle-right fa-lg"></i></button>
+        <button type="submit" class="btn btn-primary mr-2 mb-2">Submit &ensp;<i class="fa fa-arrow-circle-right fa-lg"></i></button>
       </form>  
      </div>
    </div>

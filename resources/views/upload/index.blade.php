@@ -137,9 +137,6 @@
           <img src="../../components/core/img/logoTelu-small.png" />
         </a>
           <a href="javascript: void(0);" class="air__menuLeft__user">
-            <div class="air__menuLeft__user__avatar">
-              <img src="../../components/core/img/avatars/avatar.png" alt="David Beckham" />
-            </div>
             <div class="air__menuLeft__user__name">
               {{ Auth::user()->name }}
             </div>
@@ -594,7 +591,7 @@
 				</div>
 				@endif
 
-				<form action="upload/index/proses" method="POST" enctype="multipart/form-data">
+				<form action="proses" method="POST" enctype="multipart/form-data">
 					{{ csrf_field() }}
 
 					<div class="form-group">
@@ -603,7 +600,7 @@
 					</div>
 
 					<div class="form-group">
-						<b>Keterangan</b>
+						<b>Description</b>
 						<textarea class="form-control" name="keterangan"></textarea>
 					</div>
 
@@ -616,7 +613,7 @@
 					<thead>
 						<tr>
 							<th>File PDF</th>
-							<th>Keterangan</th>
+							<th>Description</th>
               <th>Edit</th>
 							<th>Delete</th>
 						</tr>

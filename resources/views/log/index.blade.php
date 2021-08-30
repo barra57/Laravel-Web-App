@@ -606,14 +606,6 @@
           </tr>
         @endforeach
         </tbody>
-        <tfoot>
-          <tr>
-            <th>Name</th>
-            <th>NIM</th>
-            <th>Email</th>
-            <th>Logs</th>
-          </tr>
-        </tfoot>
       </table>
      </div>
     </div>

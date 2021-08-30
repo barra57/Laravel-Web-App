@@ -530,12 +530,12 @@
       <div class="air__layout__content">
         <div class="air__utils__content">
           <div class="air__utils__heading">
-          <h5>Invoice</h5>
+          <h5>Payment</h5>
 </div>
 <div class="card">
   <div class="card-body">
     <h4 class="mb-4">
-      <strong>Konfirmasi Pembayaran</strong>
+      <strong>Payment Confirmation</strong>
     </h4>
     <div class="row">
       <div class="col-lg-12">
@@ -544,23 +544,23 @@
             <thead>
               <tr>
                 <th>MANDIRI VIRTUAL ACCOUNT</th>
-                <th>Mandiri</th>
+                <th>MANDIRI</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Nomor Virtual Account</td>
+                <td>Virtual Account Number</td>
                 <td>8870882121728884</td>
               </tr>
               <tr>
-                <td>Total Pembayaan</td>
-                <td>Rp330.000</td>
+                <td>Total Payment</td>
+                <td>Rp550.000</td>
               </tr>
             </tbody>
           </table>
         </div>
         <div class="text-right font-size-18 text-dark">
-            <a href="/translate/paymentstatus" class="btn btn-outline-success mt-3">Cek Status Pembayaran</a>
+            <a href="/translate/paymentstatus" class="btn btn-outline-success mt-3">Check Payment Status</a>
         </div>
       </div>
     </div>

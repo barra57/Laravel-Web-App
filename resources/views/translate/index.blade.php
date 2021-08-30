@@ -530,13 +530,13 @@
       <div class="air__layout__content">
         <div class="air__utils__content">
           <div class="air__utils__heading">
-          <h5><span class="mr-3">Terjemahan</span></h5> 
+          <h5><span class="mr-3">Translate</span></h5> 
 </div>
 <div class="card">
   <div class="card-body">
   <h4 class="mb-4">
-      <strong>Terjemahan</strong>
-      <a class="btn btn-primary" href="/translate/create" role="button" style="position:absolute; right: 20px; top: 20px;">Daftar</a>
+      <strong>Translate</strong>
+      <a class="btn btn-primary" href="/translate/create" role="button" style="position:absolute; right: 20px; top: 20px;">Register</a>
     </h4>
     <div class="row">
         <div class="col-lg-12">
@@ -545,10 +545,10 @@
                     <thead>
                         <tr>
                             <th>No.</th>
-                            <th>Tanggal Terjemah</th>
-                            <th>Nama Lengkap</th>
-                            <th>Tanggal Daftar</th>
-                            <th>Penerjemah</th>
+                            <th>Translation Date</th>
+                            <th>Full Name</th>
+                            <th>Register Date</th>
+                            <th>Translator</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -564,8 +564,8 @@
                                 <a class="btn btn-primary" href="/translate/show/{{$x->id}}" role="button">View</a>
                                 <a class="btn btn-primary" href="/translate/edit/{{$x->id}}" role="button">Edit</a>
                                 <a class="btn btn-primary" href="/translate/destroy/{{$x->id}}" role="button">Delete</a>
-                                <a class="btn btn-primary" href="/translate/payment/{{$x->id}}" role="button">Pembayaran</a>
-                                <a class="btn btn-primary" href="/translate/result/{{$x->id}}" role="button">Hasil</a>
+                                <a class="btn btn-primary" href="/translate/payment/{{$x->id}}" role="button">Payment</a>
+                                <a class="btn btn-primary" href="/translate/result/{{$x->id}}" role="button">Result</a>
                             </td> 
                         </tr>
                     @endforeach

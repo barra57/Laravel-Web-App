@@ -530,12 +530,12 @@
       <div class="air__layout__content">
         <div class="air__utils__content">
           <div class="air__utils__heading">
-          <h5>Invoice</h5>
+          <h5>Payment</h5>
 </div>
 <div class="card">
   <div class="card-body">
     <h4 class="mb-4">
-      <strong>Status Pembayaran</strong>
+      <strong>Payment Status</strong>
     </h4>
     <div class="row">
       <div class="col-lg-12">
@@ -543,26 +543,20 @@
           <table class="table table-hover nowrap" id="example1">
             <thead>
               <tr>
-                <th>Jenis Layanan</th>
-                <th>Status Pembayaran</th>
+                <th>Service Type</th>
+                <th>Payment Status</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>EPrT</td>
-                <td>Lunas</td>
+                <td>Paid Off</td>
               </tr>
               <tr>
                 <td>ECCT</td>
-                <td>Lunas</td>
+                <td>Paid Off</td>
               </tr>
             </tbody>
-            <tfoot>
-              <tr>
-                <th>Jenis Layanan</th>
-                <th>Status Pembayaran</th>
-              </tr>
-            </tfoot>
           </table>
         </div>
       </div>
