@@ -720,30 +720,17 @@
               </div>
             </div>
           </div>
-          <div class="air__subbar">
-            <ul class="air__subbar__breadcrumbs mr-4">
-              <li class="air__subbar__breadcrumb">
-                <a href="#" class="air__subbar__breadcrumbLink">Main</a>
-              </li>
-              <li class="air__subbar__breadcrumb">
-                <a href="#" class="air__subbar__breadcrumbLink air__subbar__breadcrumbLink--current"
-                  >Table Roles</a
-                >
-              </li>
-            </ul>
- 
-          </div>
         </div>
       </div> 
       <div class="air__layout__content">
         <div class="air__utils__content">
           <div class="air__utils__heading"> 
-  <h5><h5><span><a href="{{ route("admin.permissions.create") }}"><button type="button"class="btn btn-primary mr-2 mb-2">Create Permissions</button></a></span> </h5></h5>
+          <h5><span class="mr-3">Table Roles</span></h5> 
 </div>
 <div class="card">
   <div class="card-body">
     <h4 class="mb-4">
-      <strong>Table</strong>
+    <h5><h5><span><a href="{{ route("admin.permissions.create") }}"><button type="button"class="btn btn-primary mr-2 mb-2">Create Permissions</button></a></span> </h5></h5>
     </h4>
     <div class="table-responsive mb-5">
       <table class="table table-hover nowrap editable-table" id="example1">

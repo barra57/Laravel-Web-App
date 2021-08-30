@@ -726,7 +726,7 @@
         <div class="air__utils__content">
           <div class="air__utils__heading">
             <h5>
-              <span class="mr-3">Lihat Users</span>
+              <span class="mr-3">Users</span>
             </h5>
 </div>
 <div class="card-body">
